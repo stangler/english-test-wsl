@@ -461,7 +461,9 @@ function getProgressGroups() {
   return lessons.map(lesson => {
     const label = lesson === 'Starter' ? 'Starter' : 'Lesson ' + lesson;
     const parts = getLessonParts(lesson);
-    const badges = [{ badgeLabel: 'すべて', lesson, part: 'all', matchParts: ['all'] }];
+    const badges = [];
+    // パートのないレッスン（Starter）だけ「すべて」を出す。それ以外はパート単位で進めるため不要
+    if (parts.length === 0) badges.push({ badgeLabel: 'すべて', lesson, part: 'all', matchParts: ['all'] });
     parts.forEach(p => badges.push({ badgeLabel: 'Part ' + p, lesson, part: p, matchParts: [p, 'all'] }));
     return { groupLabel: label, badges };
   });
