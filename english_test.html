@@ -590,7 +590,6 @@ function renderStart() {
       <div style="margin-top:20px;">
         <div class="section-label">パートを選ぶ</div>
         <div class="part-row">
-          <button class="part-btn ${state.selectedPart === 'all' ? 'selected' : ''}" data-part="all">すべて</button>
           ${partBtns}
         </div>
       </div>`;
@@ -612,7 +611,7 @@ function renderStart() {
       </label>
     </div>
 
-    <button id="start-btn" class="start-btn" ${state.selectedLesson === null ? 'disabled' : ''}>開始</button>
+    <button id="start-btn" class="start-btn" ${(state.selectedLesson === null || (state.parts.length > 0 && !state.selectedPart)) ? 'disabled' : ''}>開始</button>
     <button id="history-btn" class="result-btn" style="width:100%;margin-top:10px;">📊 履歴を見る</button>
     <button id="weak-btn" class="result-btn" style="width:100%;margin-top:10px;">📉 苦手分析</button>
   `;
@@ -648,7 +647,8 @@ function selectLesson(lesson) {
     WORDS.filter(w => w.lesson === lesson && w.part !== '').map(w => w.part)
   )];
   state.selectedLesson = lesson;
-  state.selectedPart = 'all';
+  // パートのあるレッスンはパート単位で進めるため、未選択から始める（パートのないStarterだけ全体）
+  state.selectedPart = parts.length > 0 ? null : 'all';
   state.parts = parts;
   render();
 }
