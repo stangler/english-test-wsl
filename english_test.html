@@ -156,6 +156,15 @@
   .result-btn.primary:hover { background: #b83a30; }
   .empty-msg { font-size: 13px; color: #9ca3af; padding: 8px 0; }
 
+  .wk-row { display: flex; align-items: center; gap: 8px; font-size: 12px; margin: 7px 0; }
+  .wk-label { flex: 0 0 38%; min-width: 0; word-break: break-word; }
+  .wk-bar { flex: 1; height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
+  .wk-bar > i { display: block; height: 100%; background: var(--red); }
+  .wk-num { flex: 0 0 112px; text-align: right; font-family: var(--mono); }
+  .wk-flag { color: var(--red); font-weight: 700; }
+  .wk-dim { color: #9ca3af; }
+  .wk-note { font-size: 11px; color: #9ca3af; margin: 4px 0 10px; }
+
   .progress-summary { font-size: 13px; color: #6b7280; margin-bottom: 16px; }
   .progress-section { margin-bottom: 18px; }
   .progress-section:last-child { margin-bottom: 0; }
@@ -227,6 +236,7 @@ function compareWords(user, correct) {
 
 // ---------- 履歴保存 (localStorage) ----------
 const HISTORY_KEY = 'ja2en_quiz_history';
+const WORDSTATS_KEY = 'ja2en_quiz_wordstats';
 
 function loadHistory() {
   try {
@@ -253,6 +263,7 @@ function clearHistory() {
   try {
     localStorage.removeItem(HISTORY_KEY);
     localStorage.removeItem(ATTEMPTED_KEY);
+    localStorage.removeItem(WORDSTATS_KEY);
   } catch (e) {
     console.warn('履歴の削除に失敗しました:', e);
   }
@@ -283,6 +294,144 @@ function markAttempted(item) {
   } catch (e) {
     console.warn('進捗の保存に失敗しました:', e);
   }
+}
+
+// ---------- 問題単位の記録 (苦手分析用) ----------
+function loadWordStats() {
+  try {
+    const raw = localStorage.getItem(WORDSTATS_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    console.warn('問題別記録の読み込みに失敗しました:', e);
+    return {};
+  }
+}
+
+function levenshtein(a, b) {
+  const m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) {
+      cur[j] = Math.min(
+        prev[j] + 1,
+        cur[j - 1] + 1,
+        prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      );
+    }
+    prev = cur;
+  }
+  return prev[n];
+}
+
+const ERR_EMPTY = '空欄（未回答）';
+const ERR_PUNCT = '句読点・記号のミス（. , ? ! など）';
+const ERR_ORDER = '語順違い';
+const ERR_FORM = '語形違い（-s / -ed / -ing など）';
+const ERR_TYPO = '綴りミス';
+const ERR_MISSING = '語の欠落';
+const ERR_EXTRA = '余分な語';
+const ERR_OTHER = '別の単語';
+
+function tokenDiffKind(a, b) {
+  if (a === b) return null;
+  const minLen = Math.min(a.length, b.length);
+  if (minLen >= 2 && Math.abs(a.length - b.length) <= 3 && (a.startsWith(b) || b.startsWith(a))) return 'form';
+  if (a.length >= 4 && b.length >= 4 && levenshtein(a, b) <= 2) return 'typo';
+  return 'other';
+}
+
+function classifyError(user, correct) {
+  if (!user || !user.trim()) return ERR_EMPTY;
+  const u = normalizeEn(user).split(' ').filter(Boolean);
+  const c = normalizeEn(correct).split(' ').filter(Boolean);
+  if (u.length === 0) return ERR_EMPTY;
+
+  const stripPunct = (arr) => arr.join(' ').replace(/[.,!?;:"]/g, '').replace(/\s+/g, ' ').trim();
+  if (stripPunct(u) === stripPunct(c)) return ERR_PUNCT;
+
+  if (u.length === c.length) {
+    if ([...u].sort().join(' ') === [...c].sort().join(' ')) return ERR_ORDER;
+    const kinds = u.map((w, i) => tokenDiffKind(w, c[i])).filter(Boolean);
+    if (kinds.includes('other')) return ERR_OTHER;
+    if (kinds.includes('form')) return ERR_FORM;
+    if (kinds.includes('typo')) return ERR_TYPO;
+    return ERR_OTHER;
+  }
+
+  const count = (arr) => arr.reduce((m, w) => { m[w] = (m[w] || 0) + 1; return m; }, {});
+  const isSubset = (a, b) => {
+    const cb = count(b);
+    return a.every(w => (cb[w] > 0) ? (cb[w]--, true) : false);
+  };
+  if (u.length < c.length && isSubset(u, c)) return ERR_MISSING;
+  if (u.length > c.length && isSubset(c, u)) return ERR_EXTRA;
+  return ERR_OTHER;
+}
+
+function recordWordStat(item, correct, userAnswer) {
+  try {
+    const stats = loadWordStats();
+    const key = getWordKey(item);
+    const now = new Date().toISOString();
+    const rec = stats[key] || {
+      lesson: item.lesson, part: item.part, ja: item.ja, en: item.en,
+      attempts: 0, wrong: 0, lastAt: null, lastWrongAt: null,
+      wrongAnswers: [], errorTypes: {},
+    };
+    rec.attempts += 1;
+    rec.lastAt = now;
+    if (!correct) {
+      rec.wrong += 1;
+      rec.lastWrongAt = now;
+      rec.wrongAnswers = [...(rec.wrongAnswers || []), userAnswer].slice(-5);
+      const type = classifyError(userAnswer, item.en);
+      rec.errorTypes = rec.errorTypes || {};
+      rec.errorTypes[type] = (rec.errorTypes[type] || 0) + 1;
+    }
+    stats[key] = rec;
+    localStorage.setItem(WORDSTATS_KEY, JSON.stringify(stats));
+  } catch (e) {
+    console.warn('問題別記録の保存に失敗しました:', e);
+  }
+}
+
+const NOT_ED = new Set(['need', 'bed', 'red', 'feed', 'speed', 'seed', 'weed', 'breed', 'hundred', 'sacred', 'naked', 'wicked', 'tired']);
+function hasPastForm(en) {
+  if (/\b(was|were|did|had)\b/i.test(en)) return true;
+  const words = en.toLowerCase().match(/[a-z]+/g) || [];
+  return words.some(w => w.length > 3 && w.endsWith('ed') && !NOT_ED.has(w));
+}
+
+const FEATURES = [
+  { label: '疑問文（?で終わる）', test: en => /\?\s*$/.test(en) },
+  { label: '疑問詞で始まる文', test: en => /^\s*(what|where|who|whom|whose|when|why|how|which)\b/i.test(en) },
+  { label: '否定文', test: en => /\b(not|never|no|cannot)\b|n't/i.test(en) },
+  { label: '助動詞を含む', test: en => /\b(can|could|will|would|shall|should|must|may|might)\b|'ll\b/i.test(en) },
+  { label: '過去形を含む', test: en => hasPastForm(en) },
+  { label: '進行形', test: en => /\b(am|is|are|was|were)\s+\w+ing\b|'(m|re|s)\s+\w+ing\b/i.test(en) },
+  { label: '縮約形を含む', test: en => /\w'\w/.test(en) },
+  { label: '短い文（1〜3語）', test: en => en.trim().split(/\s+/).length <= 3 },
+  { label: '中くらいの文（4〜6語）', test: en => { const n = en.trim().split(/\s+/).length; return n >= 4 && n <= 6; } },
+  { label: '長い文（7語以上）', test: en => en.trim().split(/\s+/).length >= 7 },
+];
+
+function exportStatsJson() {
+  const data = {
+    exportedAt: new Date().toISOString(),
+    wordstats: loadWordStats(),
+    history: loadHistory(),
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'english-test-stats-' + new Date().toISOString().slice(0, 10) + '.json';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
 
 // 表示上のインデックス（新しい順）から元の保存順インデックスに変換して1件削除
@@ -420,6 +569,7 @@ function render() {
   if (state.screen === 'quiz') return renderQuiz();
   if (state.screen === 'result') return renderResult();
   if (state.screen === 'history') return renderHistory();
+  if (state.screen === 'weak') return renderWeak();
 }
 
 function renderStart() {
@@ -462,6 +612,7 @@ function renderStart() {
 
     <button id="start-btn" class="start-btn" ${state.selectedLesson === null ? 'disabled' : ''}>開始</button>
     <button id="history-btn" class="result-btn" style="width:100%;margin-top:10px;">📊 履歴を見る</button>
+    <button id="weak-btn" class="result-btn" style="width:100%;margin-top:10px;">📉 苦手分析</button>
   `;
 
   app.querySelectorAll('[data-lesson]').forEach(btn => {
@@ -482,6 +633,10 @@ function renderStart() {
   }
   document.getElementById('history-btn').addEventListener('click', () => {
     state.screen = 'history';
+    render();
+  });
+  document.getElementById('weak-btn').addEventListener('click', () => {
+    state.screen = 'weak';
     render();
   });
 }
@@ -606,6 +761,7 @@ function checkAnswer() {
   state.currentAnswer = userRaw;
   state.results.push({ item, correct, userAnswer: userRaw });
   markAttempted(item);
+  recordWordStat(item, correct, userRaw);
   state.feedback = { answerText: item.en, userAnswer: userRaw, correct };
   state.markResult = correct;
 
@@ -672,6 +828,7 @@ function renderResult() {
       <button class="result-btn" id="retry-all-btn">全部再挑戦</button>
       <button class="result-btn" id="back-to-start-btn">選択に戻る</button>
       <button class="result-btn" id="view-history-btn">📊 履歴を見る</button>
+      <button class="result-btn" id="view-weak-btn">📉 苦手分析</button>
     </div>
   `;
 
@@ -706,6 +863,129 @@ function renderResult() {
     state.screen = 'history';
     render();
   });
+  document.getElementById('view-weak-btn').addEventListener('click', () => {
+    state.screen = 'weak';
+    render();
+  });
+}
+
+function renderWeak() {
+  const stats = loadWordStats();
+  const recs = Object.values(stats);
+
+  if (recs.length === 0) {
+    app.innerHTML = `
+      <div class="app-title">📉 苦手分析</div>
+      <div class="empty-msg">まだ問題別の記録がありません。テストを解くと、ここに間違えた問題と傾向が表示されます。<br>（問題別の記録は、この機能の追加後に解いた分から貯まります）</div>
+      <button class="result-btn" id="weak-back-btn" style="margin-top:16px;width:100%;">選択に戻る</button>
+    `;
+    document.getElementById('weak-back-btn').addEventListener('click', () => { state.screen = 'start'; render(); });
+    return;
+  }
+
+  const MIN = 3;
+  const totalAttempts = recs.reduce((s, r) => s + r.attempts, 0);
+  const totalWrong = recs.reduce((s, r) => s + r.wrong, 0);
+  const baseRate = totalAttempts > 0 ? totalWrong / totalAttempts : 0;
+  const pctStr = (x) => Math.round(x * 100) + '%';
+
+  const rateRow = (label, attempts, wrong) => {
+    if (attempts < MIN) {
+      return `<div class="wk-row wk-dim"><div class="wk-label">${esc(label)}</div><div class="wk-bar"></div><div class="wk-num">データ不足 (${wrong}/${attempts})</div></div>`;
+    }
+    const rate = wrong / attempts;
+    const flag = rate - baseRate >= 0.10;
+    return `<div class="wk-row"><div class="wk-label ${flag ? 'wk-flag' : ''}">${flag ? '▲ ' : ''}${esc(label)}</div>
+      <div class="wk-bar"><i style="width:${Math.round(rate * 100)}%"></i></div>
+      <div class="wk-num">${pctStr(rate)} (${wrong}/${attempts})</div></div>`;
+  };
+
+  // (a) 間違い回数ランキング
+  const ranking = recs.filter(r => r.wrong > 0).sort((a, b) =>
+    b.wrong - a.wrong ||
+    (b.wrong / b.attempts) - (a.wrong / a.attempts) ||
+    String(b.lastWrongAt).localeCompare(String(a.lastWrongAt))
+  ).slice(0, 30);
+  const lessonLabel = (r) => (r.lesson === 'Starter' ? 'Starter' : 'Lesson ' + r.lesson) + (r.part ? ' / Part ' + r.part : '');
+  const rankingHtml = ranking.length === 0
+    ? '<div class="empty-msg">間違えた問題はまだありません。</div>'
+    : ranking.map((r, i) => {
+        const last = (r.wrongAnswers && r.wrongAnswers.length) ? r.wrongAnswers[r.wrongAnswers.length - 1] : '';
+        const types = Object.entries(r.errorTypes || {}).map(([k, v]) => `${k}×${v}`).join(' / ');
+        return `
+        <div class="mistake-item">
+          <div class="mistake-q">${i + 1}. ${esc(r.ja)}</div>
+          <div class="mistake-your">直近の誤答: ${esc(last || '（未回答）')}</div>
+          <div class="mistake-correct">${esc(r.en)}</div>
+          <div class="mistake-q" style="margin:4px 0 0; font-size:11px;">❌ ${r.wrong}回 / ${r.attempts}回出題（${esc(lessonLabel(r))}）${types ? ' ・ ' + esc(types) : ''}</div>
+        </div>`;
+      }).join('');
+
+  // (b) レッスン/パート別
+  const groups = {};
+  recs.forEach(r => {
+    const k = r.lesson + '||' + (r.part || '');
+    if (!groups[k]) groups[k] = { label: lessonLabel(r), attempts: 0, wrong: 0 };
+    groups[k].attempts += r.attempts;
+    groups[k].wrong += r.wrong;
+  });
+  const groupList = Object.values(groups).sort((a, b) => {
+    const ad = a.attempts < MIN, bd = b.attempts < MIN;
+    if (ad !== bd) return ad ? 1 : -1;
+    return (b.wrong / b.attempts) - (a.wrong / a.attempts);
+  });
+  const groupHtml = groupList.map(g => rateRow(g.label, g.attempts, g.wrong)).join('');
+
+  // (c) 誤答タイプ別
+  const typeCount = {};
+  recs.forEach(r => Object.entries(r.errorTypes || {}).forEach(([k, v]) => { typeCount[k] = (typeCount[k] || 0) + v; }));
+  const typeList = Object.entries(typeCount).sort((a, b) => b[1] - a[1]);
+  const typeTotal = typeList.reduce((s, [, v]) => s + v, 0);
+  const typeHtml = typeList.length === 0
+    ? '<div class="empty-msg">誤答の記録がありません。</div>'
+    : typeList.map(([k, v]) => `
+      <div class="wk-row"><div class="wk-label">${esc(k)}</div>
+        <div class="wk-bar"><i style="width:${Math.round(v / typeTotal * 100)}%"></i></div>
+        <div class="wk-num">${v}件 (${pctStr(v / typeTotal)})</div></div>`).join('');
+
+  // (d) 英文の特徴別
+  const featRows = FEATURES.map(f => {
+    let attempts = 0, wrong = 0;
+    recs.forEach(r => { if (f.test(r.en)) { attempts += r.attempts; wrong += r.wrong; } });
+    return { label: f.label, attempts, wrong };
+  }).filter(f => f.attempts > 0).sort((a, b) => {
+    const ad = a.attempts < MIN, bd = b.attempts < MIN;
+    if (ad !== bd) return ad ? 1 : -1;
+    return (b.wrong / b.attempts) - (a.wrong / a.attempts);
+  });
+  const featHtml = featRows.map(f => rateRow(f.label, f.attempts, f.wrong)).join('');
+
+  app.innerHTML = `
+    <div class="app-title">📉 苦手分析</div>
+    <div class="progress-summary">記録済み ${recs.length}問 ／ 回答 ${totalAttempts}回 ／ 誤答 ${totalWrong}回（全体の誤答率 ${pctStr(baseRate)}）</div>
+
+    <div class="section-label">間違い回数ランキング（上位30問）</div>
+    ${rankingHtml}
+
+    <div class="section-label" style="margin-top:24px;">レッスン/パート別の誤答率</div>
+    <div class="wk-note">▲ は全体の誤答率より10ポイント以上高い項目。回答3回未満は「データ不足」</div>
+    ${groupHtml}
+
+    <div class="section-label" style="margin-top:24px;">誤答タイプ別</div>
+    <div class="wk-note">綴りミス・語形違いなどは自動判定の目安です</div>
+    ${typeHtml}
+
+    <div class="section-label" style="margin-top:24px;">英文の特徴別の誤答率</div>
+    <div class="wk-note">1問が複数の特徴に当てはまることがあります</div>
+    ${featHtml}
+
+    <div class="result-btns" style="margin-top:24px;">
+      <button class="result-btn" id="weak-export-btn">⬇ JSONエクスポート</button>
+      <button class="result-btn" id="weak-back-btn">選択に戻る</button>
+    </div>
+  `;
+  document.getElementById('weak-export-btn').addEventListener('click', exportStatsJson);
+  document.getElementById('weak-back-btn').addEventListener('click', () => { state.screen = 'start'; render(); });
 }
 
 function setHistoryFilter(filter) {
@@ -870,13 +1150,15 @@ function renderHistory() {
 
     <div class="result-btns" style="margin-top:20px;">
       <button class="result-btn" id="back-btn">選択に戻る</button>
+      <button class="result-btn" id="to-weak-btn">📉 苦手分析</button>
       <button class="result-btn" id="clear-history-btn" style="color:var(--red); border-color:var(--red);">🗑 履歴をすべて削除</button>
     </div>
   `;
 
   document.getElementById('back-btn').addEventListener('click', () => { state.screen = 'start'; render(); });
+  document.getElementById('to-weak-btn').addEventListener('click', () => { state.screen = 'weak'; render(); });
   document.getElementById('clear-history-btn').addEventListener('click', () => {
-    if (confirm('履歴をすべて削除しますか？この操作は取り消せません。')) {
+    if (confirm('履歴と問題別の記録（苦手分析のデータ）をすべて削除しますか？この操作は取り消せません。')) {
       clearHistory();
       render();
     }

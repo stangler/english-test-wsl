@@ -34,9 +34,9 @@ window.WORDS = [
     "lesson": "Starter",
     "part": "",
     "en": "Hello, I am Hasegawa Mika.",
-    "ja": "こんにちは。私は長谷川ミカです。",
+    "ja": "こんにちは、私は長谷川ミカです。",
     "ja_answers": [
-      "こんにちは。私は長谷川ミカです。"
+      "こんにちは、私は長谷川ミカです。"
     ]
   },
   {
@@ -2751,7 +2751,7 @@ window.WORDS = [
     "lesson": "3",
     "part": "1",
     "en": "open",
-    "ja": "あいえている、営業中で",
+    "ja": "あいている、営業中で",
     "ja_answers": [
       "あいえている",
       "営業中で"
@@ -2860,9 +2860,9 @@ window.WORDS = [
     "lesson": "3",
     "part": "2",
     "en": "What is this? It is a shrine.",
-    "ja": "これは何ですが。それは神社です。",
+    "ja": "これは何ですか。それは神社です。",
     "ja_answers": [
-      "これは何ですが。それは神社です。"
+      "これは何ですか。それは神社です。"
     ]
   },
   {
@@ -3476,9 +3476,9 @@ window.WORDS = [
     "lesson": "3",
     "part": "学んだことを活用する1",
     "en": "We often walk to Kaede Park together.",
-    "ja": "私たちはよくかえで公園にいっしょに行きます。",
+    "ja": "私たちはよくかえで公園にいっしょに歩きます。",
     "ja_answers": [
-      "私たちはよくかえで公園にいっしょに行きます。"
+      "私たちはよくかえで公園にいっしょに歩きます。"
     ]
   },
   {
@@ -4393,7 +4393,7 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "学んだことを整理する1",
-    "en": "see fire works",
+    "en": "see fireworks",
     "ja": "花火を見る",
     "ja_answers": [
       "花火を見る"
@@ -4557,10 +4557,10 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "学んだことを活用する1",
-    "en": "My friend and I enjoyed many places in town",
-    "ja": "and I really recommend these three!!!",
+    "en": "My friend and I enjoyed many places in town, and I really recommend these three!!!",
+    "ja": "私の友達と私は町のたくさんの場所を楽しみました、そして私はこれらの３つを本当におすすめします!!!",
     "ja_answers": [
-      "and I really recommend these three!!!"
+      "私の友達と私は町のたくさんの場所を楽しみました、そして私はこれらの３つを本当におすすめします!!!"
     ]
   },
   {
@@ -4584,19 +4584,19 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "学んだことを活用する1",
-    "en": "It was beautiful",
-    "ja": "and I liked the dog statue under the small torii.",
+    "en": "It was beautiful, and I liked the dog statue under the small torii.",
+    "ja": "それは美しかった、そして私は小さな鳥居の下の犬の石像が好きでした。",
     "ja_answers": [
-      "and I liked the dog statue under the small torii."
+      "それは美しかった、そして私は小さな鳥居の下の犬の石像が好きでした。"
     ]
   },
   {
     "lesson": "4",
     "part": "学んだことを活用する1",
     "en": "That place is far from the station.",
-    "ja": "その場所は駅から遠いです。",
+    "ja": "あの場所は駅から遠いです。",
     "ja_answers": [
-      "その場所は駅から遠いです。"
+      "あの場所は駅から遠いです。"
     ]
   },
   {
@@ -4638,10 +4638,10 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "学んだことを活用する1",
-    "en": "You can go there by rental bicycle",
-    "ja": "but you can also walk.",
+    "en": "You can go there by rental bicycle, but you can also walk.",
+    "ja": "あなたはそこへ貸し出しの自転車で行くことができます、しかしあなたは歩くこともできます。",
     "ja_answers": [
-      "but you can also walk."
+      "あなたはそこへ貸し出しの自転車で行くことができます、しかしあなたは歩くこともできます。"
     ]
   },
   {
@@ -4674,19 +4674,19 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "学んだことを活用する1",
-    "en": "The buses don't go there",
-    "ja": "but you can walk from the station.",
+    "en": "The buses don't go there, but you can walk from the station.",
+    "ja": "バスはそこに行きません、しかしあなたは駅から歩くことができます。",
     "ja_answers": [
-      "but you can walk from the station."
+      "バスはそこに行きません、しかしあなたは駅から歩くことができます。"
     ]
   },
   {
     "lesson": "4",
     "part": "学んだことを活用する2",
-    "en": "Last weekend",
-    "ja": "I went to Lake Kaede.",
+    "en": "Last weekend, I went to Lake Kaede.",
+    "ja": "先週末、私はかえで湖に行きました。",
     "ja_answers": [
-      "I went to Lake Kaede."
+      "先週末、私はかえで湖に行きました。"
     ]
   },
   {
@@ -4732,28 +4732,28 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "学んだことを活用する2",
-    "en": "Today",
-    "ja": "I went to the summer festival with Mika and Lisa.",
+    "en": "Today, I went to the summer festival with Mika and Lisa.",
+    "ja": "今日、私は夏祭りにミカとリサといっしょに行きました。",
     "ja_answers": [
-      "I went to the summer festival with Mika and Lisa."
+      "今日、私は夏祭りにミカとリサといっしょに行きました。"
     ]
   },
   {
     "lesson": "4",
     "part": "学んだことを活用する2",
-    "en": "We ate takoyaki",
-    "ja": "and it was delicious.",
+    "en": "We ate takoyaki, and it was delicious.",
+    "ja": "私たちはたこ焼きを食べました、そしてそれはおいしかったです。",
     "ja_answers": [
-      "and it was delicious."
+      "私たちはたこ焼きを食べました、そしてそれはおいしかったです。"
     ]
   },
   {
     "lesson": "4",
     "part": "学んだことを活用する2",
-    "en": "At the end of the festival",
-    "ja": "we saw ...",
+    "en": "At the end of the festival, we saw ...",
+    "ja": "お祭りの終わりに、私たちは見ました。",
     "ja_answers": [
-      "we saw ..."
+      "お祭りの終わりに、私たちは見ました。"
     ]
   },
   {
@@ -4777,10 +4777,10 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "学んだことを活用する2",
-    "en": "In this class",
-    "ja": "8 students want to go to Hokkaido.",
+    "en": "In this class, 8 students want to go to Hokkaido.",
+    "ja": "このクラスでは8人の生徒が北海道に行きたいです。",
     "ja_answers": [
-      "8 students want to go to Hokkaido."
+      "このクラスでは8人の生徒が北海道に行きたいです。"
     ]
   },
   {
@@ -4882,7 +4882,7 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "Take Action!",
-    "en": "cleark",
+    "en": "clerk",
     "ja": "店員",
     "ja_answers": [
       "店員"
@@ -4973,10 +4973,10 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "Take Action!",
-    "en": "Um",
-    "ja": "cola and chocolate cake",
+    "en": "Um, cola and chocolate cake, please.",
+    "ja": "うーん、コーラとチョコレートケーキをお願いします。",
     "ja_answers": [
-      "cola and chocolate cake"
+      "うーん、コーラとチョコレートケーキをお願いします。"
     ]
   },
   {
@@ -5244,10 +5244,10 @@ window.WORDS = [
   {
     "lesson": "4",
     "part": "SPECIAL TOPICS",
-    "en": "Children love me",
-    "ja": "too.",
+    "en": "Children love me, too.",
+    "ja": "子供たちは私のことも愛しています。",
     "ja_answers": [
-      "too."
+      "子供たちは私のことも愛しています。"
     ]
   },
   {
@@ -5515,10 +5515,10 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "2",
-    "en": "Yes",
-    "ja": "she does.",
+    "en": "Yes, she does.",
+    "ja": "はい、住んでいます。",
     "ja_answers": [
-      "she does."
+      "はい、住んでいます。"
     ]
   },
   {
@@ -5560,10 +5560,10 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "2",
-    "en": "Yes",
-    "ja": "she does.",
+    "en": "Yes, she does.",
+    "ja": "はい、勉強しています。",
     "ja_answers": [
-      "she does."
+      "はい、勉強しています。"
     ]
   },
   {
@@ -5697,10 +5697,10 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "2",
-    "en": "Yes",
-    "ja": "he does.",
+    "en": "Yes, he does.",
+    "ja": "はい、演奏します。",
     "ja_answers": [
-      "he does."
+      "はい、演奏します。"
     ]
   },
   {
@@ -5715,16 +5715,16 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "2",
-    "en": "No",
-    "ja": "he cannot.",
+    "en": "No, he cannot.",
+    "ja": "いいえ、できません。",
     "ja_answers": [
-      "he cannot."
+      "いいえ、できません。"
     ]
   },
   {
     "lesson": "5",
     "part": "3",
-    "en": "Whose towl is this?",
+    "en": "Whose towel is this?",
     "ja": "これはだれのタオルですか。",
     "ja_answers": [
       "これはだれのタオルですか。"
@@ -5897,7 +5897,7 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "Goal Activity",
-    "en": "Please look at this picure carefully.",
+    "en": "Please look at this picture carefully.",
     "ja": "この写真を注意深く見てください。",
     "ja_answers": [
       "この写真を注意深く見てください。"
@@ -6351,7 +6351,7 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを整理する2",
-    "en": "Does Mr.Smith speak Japanese?",
+    "en": "Does Mr. Smith speak Japanese?",
     "ja": "スミス先生は日本語を話しますか。",
     "ja_answers": [
       "スミス先生は日本語を話しますか。"
@@ -6369,19 +6369,19 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを整理する2",
-    "en": "Yes",
-    "ja": "she does.",
+    "en": "Yes, she does.",
+    "ja": "はい、します。",
     "ja_answers": [
-      "she does."
+      "はい、します。"
     ]
   },
   {
     "lesson": "5",
     "part": "学んだことを整理する2",
-    "en": "No",
-    "ja": "she doesn't.",
+    "en": "No, she doesn't.",
+    "ja": "いいえ、しません。",
     "ja_answers": [
-      "she doesn't."
+      "いいえ、しません。"
     ]
   },
   {
@@ -6432,7 +6432,7 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを活用する1",
-    "en": "These two elephants are the Azian elephants.",
+    "en": "These two elephants are the Asian elephants.",
     "ja": "これら2頭の像は、アジア象です。",
     "ja_answers": [
       "これら2頭の像は、アジア象です。"
@@ -6477,10 +6477,10 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを活用する1",
-    "en": "She really likes apples",
-    "ja": "and eats thirty apples every day.",
+    "en": "She really likes apples, and eats thirty apples every day.",
+    "ja": "彼女は本当にリンゴが好きで、毎日30個のリンゴを食べます。",
     "ja_answers": [
-      "and eats thirty apples every day."
+      "彼女は本当にリンゴが好きで、毎日30個のリンゴを食べます。"
     ]
   },
   {
@@ -6513,10 +6513,10 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを活用する1",
-    "en": "He doesn't eat apples",
-    "ja": "but he eats bananas.",
+    "en": "He doesn't eat apples, but he eats bananas.",
+    "ja": "彼はリンゴを食べません、しかしバナナを食べます。",
     "ja_answers": [
-      "but he eats bananas."
+      "彼はリンゴを食べません、しかしバナナを食べます。"
     ]
   },
   {
@@ -6630,10 +6630,10 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを活用する2",
-    "en": "Yes",
-    "ja": "it does.",
+    "en": "Yes, it does.",
+    "ja": "はい、行きます。",
     "ja_answers": [
-      "it does."
+      "はい、行きます。"
     ]
   },
   {
@@ -6724,10 +6724,10 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを活用する2",
-    "en": "Oh",
-    "ja": "thank you.",
+    "en": "Oh, thank you.",
+    "ja": "おー、ありがとう。",
     "ja_answers": [
-      "thank you."
+      "おー、ありがとう。"
     ]
   },
   {
@@ -6773,7 +6773,7 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "学んだことを活用する2",
-    "en": "Whoes textbook is this?",
+    "en": "Whose textbook is this?",
     "ja": "この教科書はだれの。",
     "ja_answers": [
       "この教科書はだれの。"
@@ -6840,7 +6840,7 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "Language Focus",
-    "en": "I teache science.",
+    "en": "I teach science.",
     "ja": "私は理科を教えます。",
     "ja_answers": [
       "私は理科を教えます。",
@@ -6974,7 +6974,7 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "SPECIAL TOPICS",
-    "en": "Mr.Kato teaches science.",
+    "en": "Mr. Kato teaches science.",
     "ja": "加藤先生は理科を教えます。",
     "ja_answers": [
       "加藤先生は理科を教えます。"
@@ -7010,7 +7010,7 @@ window.WORDS = [
   {
     "lesson": "5",
     "part": "SPECIAL TOPICS",
-    "en": "I practive soccer every day.",
+    "en": "I practice soccer every day.",
     "ja": "私は毎日、サッカーの練習をします。",
     "ja_answers": [
       "私は毎日、サッカーの練習をします。",
