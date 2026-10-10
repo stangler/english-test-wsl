@@ -91,6 +91,14 @@
   }
   .question-label { font-size: 11px; font-weight: 700; color: #9ca3af; letter-spacing: 0.05em; margin-bottom: 8px; }
   .question-text { font-size: 20px; font-weight: 700; line-height: 1.7; }
+  .audio-btn {
+    margin-top: 12px; width: 44px; height: 44px; border-radius: 50%;
+    border: 2px solid var(--border); background: var(--card-bg); color: inherit;
+    font-size: 18px; line-height: 1; cursor: pointer; transition: all .15s;
+  }
+  .audio-btn:hover { border-color: var(--blue); transform: translateY(-1px); }
+  .audio-btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .audio-btn.playing { border-color: var(--blue); background: var(--border); }
   .mark-svg { position: absolute; top: 12px; right: 16px; width: 56px; height: 56px; }
   @keyframes drawCircle { from { stroke-dashoffset: 160; } to { stroke-dashoffset: 0; } }
   @keyframes drawCross1 { from { stroke-dashoffset: 60; } to { stroke-dashoffset: 0; } }
@@ -542,6 +550,42 @@ function renderPerGroupCharts(history) {
   }).join('');
 }
 
+// ---------- 音声読み上げ（ブラウザの音声合成） ----------
+const canSpeak = ('speechSynthesis' in window) && ('SpeechSynthesisUtterance' in window);
+let currentUtter = null;
+
+function pickVoice() {
+  const voices = window.speechSynthesis.getVoices().filter(v => /^en[-_]US/i.test(v.lang));
+  return voices.find(v => /natural|online/i.test(v.name))
+      || voices.find(v => /google|samantha|aria|jenny/i.test(v.name))
+      || voices[0] || null;
+}
+
+function stopSpeaking() {
+  if (!canSpeak) return;
+  currentUtter = null;
+  window.speechSynthesis.cancel();
+  const btn = document.getElementById('audio-btn');
+  if (btn) btn.classList.remove('playing');
+}
+
+function speakItem(item) {
+  if (!canSpeak || !item) return;
+  const text = String(item.en || '').replace(/\.\.\./g, ' ').replace(/\s+/g, ' ').trim();
+  if (!text) return;
+  stopSpeaking();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US';
+  u.rate = 0.9;
+  const v = pickVoice();
+  if (v) u.voice = v;
+  currentUtter = u;
+  const btn = document.getElementById('audio-btn');
+  if (btn) btn.classList.add('playing');
+  u.onend = u.onerror = () => { if (currentUtter === u) stopSpeaking(); };
+  window.speechSynthesis.speak(u);
+}
+
 // ---------- アプリ状態 ----------
 const state = {
   screen: 'start',
@@ -654,6 +698,7 @@ function selectLesson(lesson) {
 }
 
 function startQuiz(shuffle) {
+  stopSpeaking();
   let items = WORDS.filter(w => w.lesson === state.selectedLesson);
   if (state.selectedPart && state.selectedPart !== 'all') {
     items = items.filter(w => w.part === state.selectedPart);
@@ -723,6 +768,7 @@ function renderQuiz() {
     <div class="question-card">
       <div class="question-label">日本語</div>
       <div class="question-text">${esc(item.ja)}</div>
+      ${canSpeak ? `<button type="button" class="audio-btn" id="audio-btn" aria-label="音声を再生" title="音声を再生">🔊</button>` : ''}
       ${markSvg}
     </div>
 
@@ -745,6 +791,8 @@ function renderQuiz() {
       if (!state.isAnswered) checkAnswer(); else nextQuestion();
     }
   });
+  const audioBtn = document.getElementById('audio-btn');
+  if (audioBtn) audioBtn.addEventListener('click', () => { speakItem(item); input.focus(); });
   const checkBtn = document.getElementById('check-btn');
   if (checkBtn) checkBtn.addEventListener('click', checkAnswer);
   const nextBtn = document.getElementById('next-btn');
@@ -771,6 +819,7 @@ function checkAnswer() {
 }
 
 function nextQuestion() {
+  stopSpeaking();
   if (state.currentIndex === state.queue.length - 1) {
     state.screen = 'result';
     const total = state.results.length;
