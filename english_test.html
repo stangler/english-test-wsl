@@ -225,6 +225,10 @@ const CONTRACTIONS_MAP = {
   "they've": "they have", "i'll": "i will", "you'll": "you will", "he'll": "he will",
   "she'll": "she will", "it'll": "it will", "we'll": "we will", "they'll": "they will",
   "let's": "let us",
+  "i'd": "i would", "you'd": "you would", "he'd": "he would", "she'd": "she would",
+  "we'd": "we would", "they'd": "they would",
+  "what's": "what is", "where's": "where is", "who's": "who is", "how's": "how is",
+  "there's": "there is", "here's": "here is",
 };
 const CONTRACTION_KEYS = Object.keys(CONTRACTIONS_MAP).sort((a, b) => b.length - a.length);
 const CONTRACTION_RE = new RegExp('\\b(' + CONTRACTION_KEYS.join('|') + ')\\b', 'gi');
@@ -233,15 +237,47 @@ function expandContractions(text) {
   return text.toLowerCase().replace(CONTRACTION_RE, (m) => CONTRACTIONS_MAP[m.toLowerCase()]);
 }
 function normalizeEn(text) {
-  return expandContractions(text)
-    .normalize('NFKC')
+  return expandContractions(
+    text
+      .normalize('NFKC')
+      .replace(/[\u2018\u2019\u02BC\u0060\u00B4]/g, "'")   // 曲がったアポストロフィ → '
+  )
+    .replace(/\bcan not\b/g, 'cannot')
+    .replace(/[-\u2010-\u2015]/g, ' ')                       // hip-hop → hip hop
     .replace(/'/g, '')
     .replace(/\b(a|an|the)\b/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
+// 判定用: 句読点（. , ! ? ; : " “ ”）の有無は無視する
+function stripPunctForCompare(text) {
+  return normalizeEn(text).replace(/[.,!?;:"\u201C\u201D]/g, '').replace(/\s+/g, ' ').trim();
+}
 function compareWords(user, correct) {
-  return normalizeEn(user) === normalizeEn(correct);
+  return stripPunctForCompare(user) === stripPunctForCompare(correct);
+}
+
+// 語順違いなどの別解（キー: 正解データの英文）
+const ALT_ANSWERS = {
+  'Also, I practice it in my house every day.': ['Also, I practice it every day in my house.'],
+  'Last weekend, I went to Lake Kaede.': ['I went to Lake Kaede last weekend.'],
+  'Today, I went to the summer festival with Mika and Lisa.': ['I went to the summer festival with Mika and Lisa today.'],
+  'I go to his house for the lessons on Sundays.': ['I go to his house on Sundays for the lessons.'],
+  'In this class, 8 students want to go to Hokkaido.': ['8 students in this class want to go to Hokkaido.'],
+};
+// 日本語が同じで英語が複数ある問題（例:「いいえ、できません。」）は、どれを答えても正解にする
+let JA_TO_EN = null;
+function getJaToEn() {
+  if (JA_TO_EN) return JA_TO_EN;
+  JA_TO_EN = {};
+  (window.WORDS || []).forEach((w) => {
+    (JA_TO_EN[w.ja] = JA_TO_EN[w.ja] || []).push(w.en);
+  });
+  return JA_TO_EN;
+}
+function compareAny(user, item) {
+  const cands = [item.en, ...(ALT_ANSWERS[item.en] || []), ...(getJaToEn()[item.ja] || [])];
+  return cands.some((c) => compareWords(user, c));
 }
 
 // ---------- 履歴保存 (localStorage) ----------
@@ -807,7 +843,7 @@ function checkAnswer() {
   const input = document.getElementById('answer-input');
   const userRaw = input.value.trim();
 
-  const correct = compareWords(userRaw, item.en);
+  const correct = compareAny(userRaw, item);
 
   state.isAnswered = true;
   state.currentAnswer = userRaw;
