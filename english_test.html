@@ -155,6 +155,8 @@
   .mistake-q { color: #6b7280; margin-bottom: 4px; }
   .mistake-your { color: var(--red); font-size: 12px; margin-bottom: 4px; }
   .mistake-correct { font-family: var(--mono); font-size: 14px; font-weight: 600; }
+  .mistake-correct-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .mistake-item .audio-btn { margin-top: 0; width: 36px; height: 36px; font-size: 16px; flex: none; }
   .result-btns { display: flex; flex-direction: column; gap: 10px; }
   .result-btn {
     padding: 14px; border: 2px solid var(--border); border-radius: 10px; font-weight: 700;
@@ -855,11 +857,14 @@ function renderResult() {
 
   let mistakesHtml = '';
   if (mistakes.length > 0) {
-    const items = mistakes.map(r => `
+    const items = mistakes.map((r, i) => `
       <div class="mistake-item">
         <div class="mistake-q">${esc(r.item.ja)}</div>
         <div class="mistake-your">あなたの答え: ${esc(r.userAnswer || '（未回答）')}</div>
-        <div class="mistake-correct">正解: ${esc(r.item.en)}</div>
+        <div class="mistake-correct-row">
+          <div class="mistake-correct">正解: ${esc(r.item.en)}</div>
+          ${canSpeak ? `<button type="button" class="audio-btn mistake-audio" data-idx="${i}" aria-label="音声を再生" title="音声を再生">🔊</button>` : ''}
+        </div>
       </div>`).join('');
     mistakesHtml = `
       <div class="mistakes-section">
@@ -883,8 +888,13 @@ function renderResult() {
     </div>
   `;
 
+  document.querySelectorAll('.mistake-audio').forEach(btn => {
+    btn.addEventListener('click', () => speakItem(mistakes[Number(btn.dataset.idx)].item));
+  });
+
   const rmBtn = document.getElementById('retry-mistakes-btn');
   if (rmBtn) rmBtn.addEventListener('click', () => {
+    stopSpeaking();
     state.queue = mistakes.map(r => r.item);
     state.currentIndex = 0;
     state.results = [];
@@ -896,6 +906,7 @@ function renderResult() {
     render();
   });
   document.getElementById('retry-all-btn').addEventListener('click', () => {
+    stopSpeaking();
     state.queue = [...state.queue].sort(() => Math.random() - 0.5);
     state.currentIndex = 0;
     state.results = [];
@@ -907,14 +918,17 @@ function renderResult() {
     render();
   });
   document.getElementById('back-to-start-btn').addEventListener('click', () => {
+    stopSpeaking();
     state.screen = 'start';
     render();
   });
   document.getElementById('view-history-btn').addEventListener('click', () => {
+    stopSpeaking();
     state.screen = 'history';
     render();
   });
   document.getElementById('view-weak-btn').addEventListener('click', () => {
+    stopSpeaking();
     state.screen = 'weak';
     render();
   });
