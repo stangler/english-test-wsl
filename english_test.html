@@ -201,6 +201,10 @@
   }
   .history-del-btn:hover { color: var(--red); background: var(--red-light); }
   .pb-count { font-size: 11px; font-weight: 700; color: var(--blue); }
+
+.lesson-btn, .part-btn { border-radius: 16px; text-align: center; line-height: 1.3; }
+
+.btn-count { display: block; font-size: 11px; opacity: .75; }
 </style>
 </head>
 <body>
@@ -659,14 +663,14 @@ function render() {
 function renderStart() {
   const lessonBtns = lessons.map(l => `
     <button class="lesson-btn ${state.selectedLesson === l ? 'selected' : ''}" data-lesson="${esc(l)}">
-      ${l === 'Starter' ? 'Starter' : 'Lesson ' + esc(l)}
+      ${l === 'Starter' ? 'Starter' : 'Lesson ' + esc(l)}<span class="btn-count">${WORDS.filter(w => w.lesson === l).length}問</span>
     </button>`).join('');
 
   let partSection = '';
   if (state.selectedLesson && state.parts.length > 0) {
     const partBtns = state.parts.map(p => `
       <button class="part-btn ${state.selectedPart === p ? 'selected' : ''}" data-part="${esc(p)}">
-        Part ${esc(p)}
+        Part ${esc(p)}<span class="btn-count">${WORDS.filter(w => w.lesson === state.selectedLesson && w.part === p).length}問</span>
       </button>`).join('');
     partSection = `
       <div style="margin-top:20px;">
@@ -1131,11 +1135,13 @@ function renderHistory() {
 
   if (fullHistory.length === 0) {
     app.innerHTML = `
+      <button class="result-btn" id="back-top-btn" style="width:100%;margin-bottom:16px;">← 戻る</button>
       <div class="app-title">📊 履歴</div>
       <div class="empty-msg">まだテスト履歴がありません。</div>
       <button class="result-btn" id="back-btn" style="margin-top:16px;">選択に戻る</button>
     `;
     document.getElementById('back-btn').addEventListener('click', () => { state.screen = 'start'; render(); });
+    document.getElementById('back-top-btn').addEventListener('click', () => { state.screen = 'start'; render(); });
     return;
   }
 
@@ -1209,6 +1215,7 @@ function renderHistory() {
     : '';
 
   app.innerHTML = `
+    <button class="result-btn" id="back-top-btn" style="width:100%;margin-bottom:16px;">← 戻る</button>
     <div class="app-title">📊 履歴</div>
     <div class="app-subtitle">${filter ? '（フィルター適用中）' : 'これまでのテスト結果'}</div>
 
@@ -1256,6 +1263,7 @@ function renderHistory() {
     </div>
   `;
 
+  document.getElementById('back-top-btn').addEventListener('click', () => { state.screen = 'start'; render(); });
   document.getElementById('back-btn').addEventListener('click', () => { state.screen = 'start'; render(); });
   document.getElementById('to-weak-btn').addEventListener('click', () => { state.screen = 'weak'; render(); });
   document.getElementById('clear-history-btn').addEventListener('click', () => {
