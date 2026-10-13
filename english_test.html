@@ -205,6 +205,43 @@
 .lesson-btn, .part-btn { border-radius: 16px; text-align: center; line-height: 1.3; }
 
 .btn-count { display: block; font-size: 11px; opacity: .75; }
+
+/* ---------- 問題・正解一覧 ---------- */
+.al-back { border: none; background: none; color: var(--blue); font-family: var(--sans); font-size: 13px; cursor: pointer; padding: 0; margin-bottom: 14px; }
+.al-back:hover { text-decoration: underline; }
+.al-tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0 8px; }
+.al-search { flex: 1; min-width: 180px; padding: 8px 12px; border: 2px solid var(--border); border-radius: 10px; font-family: var(--sans); font-size: 14px; background: #fff; color: var(--text); }
+.al-search:focus { outline: none; border-color: var(--blue); }
+.al-summary { font-size: 12px; color: #6b7280; margin: 6px 0 4px; }
+.al-part-heading { font-size: 14px; font-weight: 700; margin: 26px 0 8px; padding-bottom: 4px; border-bottom: 2px solid var(--border); display: flex; justify-content: space-between; align-items: baseline; }
+.al-part-heading .al-cnt { font-size: 11px; font-weight: 500; color: #9ca3af; }
+.al-list { list-style: none; margin: 0; padding: 0; }
+.al-row { display: grid; grid-template-columns: 28px 1fr 1fr; gap: 12px; padding: 10px 4px; border-bottom: 1px dashed var(--border); align-items: start; }
+.al-no { font-family: var(--mono); font-size: 11px; color: #9ca3af; padding-top: 3px; }
+.al-ja { font-size: 14px; line-height: 1.6; }
+.al-en { font-size: 14px; line-height: 1.6; font-weight: 500; }
+.al-en .al-main { font-family: var(--mono); font-size: 13px; }
+.al-en-head { display: flex; align-items: flex-start; gap: 8px; }
+.al-en-head .al-main { flex: 1; }
+.al-en-head .audio-btn { margin-top: 0; width: 32px; height: 32px; font-size: 15px; flex: none; }
+.al-en .al-alt { display: block; margin-top: 4px; font-family: var(--mono); font-size: 12px; font-weight: 400; color: var(--blue); }
+.al-en .al-alt::before { content: '別解: '; font-family: var(--sans); color: #9ca3af; }
+.al-hide .al-en { cursor: pointer; background: var(--red-light); border-radius: 6px; min-height: 28px; position: relative; }
+.al-hide .al-en > * { visibility: hidden; }
+.al-hide .al-en::after { content: 'タップで表示'; position: absolute; left: 10px; top: 4px; font-size: 11px; color: var(--red); font-weight: 500; }
+.al-hide .al-row.revealed .al-en { background: transparent; min-height: 0; cursor: default; }
+.al-hide .al-row.revealed .al-en > * { visibility: visible; }
+.al-hide .al-row.revealed .al-en::after { content: none; }
+.al-empty { padding: 32px 0; color: #9ca3af; text-align: center; font-size: 14px; }
+.al-mark { background: #fbe9a8; color: inherit; padding: 0 1px; border-radius: 2px; }
+@media (max-width: 600px) {
+  .al-row { grid-template-columns: 24px 1fr; }
+  .al-en { grid-column: 2; }
+}
+@media print {
+  .al-back, .al-tools, .al-filters, .al-bottom-btn, .al-en-head .audio-btn { display: none !important; }
+  .al-row { break-inside: avoid; }
+}
 </style>
 </head>
 <body>
@@ -641,6 +678,10 @@ const state = {
   feedback: null,
   markResult: null,
   currentHistoryFilter: null,
+  listLesson: null,
+  listPart: 'all',
+  listQuery: '',
+  listHide: false,
 };
 const lessons = [...new Set(WORDS.map(w => w.lesson))];
 
@@ -658,6 +699,7 @@ function render() {
   if (state.screen === 'result') return renderResult();
   if (state.screen === 'history') return renderHistory();
   if (state.screen === 'weak') return renderWeak();
+  if (state.screen === 'list') return renderList();
 }
 
 function renderStart() {
@@ -700,6 +742,7 @@ function renderStart() {
     <button id="start-btn" class="start-btn" ${(state.selectedLesson === null || (state.parts.length > 0 && !state.selectedPart)) ? 'disabled' : ''}>開始</button>
     <button id="history-btn" class="result-btn" style="width:100%;margin-top:10px;">📊 履歴を見る</button>
     <button id="weak-btn" class="result-btn" style="width:100%;margin-top:10px;">📉 苦手分析</button>
+    <button id="list-btn" class="result-btn" style="width:100%;margin-top:10px;">📋 問題・正解一覧</button>
   `;
 
   app.querySelectorAll('[data-lesson]').forEach(btn => {
@@ -725,6 +768,159 @@ function renderStart() {
   document.getElementById('weak-btn').addEventListener('click', () => {
     state.screen = 'weak';
     render();
+  });
+  document.getElementById('list-btn').addEventListener('click', () => {
+    // スタート画面でレッスンを選んでいれば、そのレッスンから開く
+    state.listLesson = state.selectedLesson || state.listLesson || lessons[0] || null;
+    state.listPart = 'all';
+    state.screen = 'list';
+    render();
+  });
+}
+
+// ---------- 問題・正解一覧 ----------
+function getAltAnswers(item) {
+  const list = [
+    ...(ALT_ANSWERS[item.en] || []),
+    ...(getJaToEn()[item.ja] || []).filter(e => e !== item.en),
+  ];
+  return [...new Set(list)];
+}
+
+function highlightText(text, q) {
+  const safe = esc(text);
+  if (!q) return safe;
+  const re = new RegExp('(' + esc(q).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return safe.replace(re, '<mark class="al-mark">$1</mark>');
+}
+
+let listShownItems = [];
+
+function renderList() {
+  if (!state.listLesson) state.listLesson = lessons[0] || null;
+  stopSpeaking();
+  const lessonName = (l) => (l === 'Starter' ? 'Starter' : 'Lesson ' + l);
+  const partName = (p) => (/^\d/.test(p) ? 'Part ' + p : p);
+
+  const inLesson = WORDS.filter(w => w.lesson === state.listLesson);
+  const parts = [...new Set(inLesson.map(w => w.part))];
+  if (state.listPart !== 'all' && !parts.includes(state.listPart)) state.listPart = 'all';
+
+  const q = state.listQuery.trim();
+  const ql = q.toLowerCase();
+  const filtered = inLesson.filter(w => {
+    if (state.listPart !== 'all' && w.part !== state.listPart) return false;
+    if (!ql) return true;
+    return w.ja.toLowerCase().includes(ql) || w.en.toLowerCase().includes(ql);
+  });
+
+  const lessonBtns = lessons.map(l => `
+    <button class="lesson-btn ${state.listLesson === l ? 'selected' : ''}" data-al-lesson="${esc(l)}">
+      ${esc(lessonName(l))}<span class="btn-count">${WORDS.filter(w => w.lesson === l).length}問</span>
+    </button>`).join('');
+
+  let partBtns = '';
+  if (parts.length > 1 || (parts.length === 1 && parts[0] !== '')) {
+    partBtns = `
+      <div style="margin-top:18px;">
+        <div class="section-label">パートで絞る</div>
+        <div class="part-row">
+          <button class="part-btn ${state.listPart === 'all' ? 'selected' : ''}" data-al-part="all">すべて<span class="btn-count">${inLesson.length}問</span></button>
+          ${parts.map(p => `
+            <button class="part-btn ${state.listPart === p ? 'selected' : ''}" data-al-part="${esc(p)}">
+              ${esc(partName(p))}<span class="btn-count">${inLesson.filter(w => w.part === p).length}問</span>
+            </button>`).join('')}
+        </div>
+      </div>`;
+  }
+
+  const groups = [];
+  listShownItems = [];
+  filtered.forEach(w => {
+    let g = groups.find(x => x.part === w.part);
+    if (!g) { g = { part: w.part, items: [] }; groups.push(g); }
+    g.items.push({ w, idx: listShownItems.length });
+    listShownItems.push(w);
+  });
+
+  const body = groups.length === 0
+    ? '<div class="al-empty">該当する問題がありません</div>'
+    : groups.map(g => `
+      <div class="al-part-heading">
+        <span>${esc(lessonName(state.listLesson))}${g.part !== '' ? ' / ' + esc(partName(g.part)) : ''}</span>
+        <span class="al-cnt">${g.items.length}問</span>
+      </div>
+      <ol class="al-list ${state.listHide ? 'al-hide' : ''}">
+        ${g.items.map(({ w, idx }, i) => `
+          <li class="al-row">
+            <span class="al-no">${i + 1}</span>
+            <div class="al-ja">${highlightText(w.ja, q)}</div>
+            <div class="al-en">
+              <div class="al-en-head">
+                <span class="al-main">${highlightText(w.en, q)}</span>
+                ${canSpeak ? `<button type="button" class="audio-btn al-audio" data-al-idx="${idx}" aria-label="音声を再生" title="音声を再生">🔊</button>` : ''}
+              </div>
+              ${getAltAnswers(w).map(a => `<span class="al-alt">${highlightText(a, q)}</span>`).join('')}
+            </div>
+          </li>`).join('')}
+      </ol>`).join('');
+
+  const searchFocused = document.activeElement && document.activeElement.id === 'al-search';
+  const caret = searchFocused ? document.activeElement.selectionStart : null;
+
+  app.innerHTML = `
+    <button class="al-back" id="al-back-btn">← 選択に戻る</button>
+    <div class="app-title">📋 問題・正解一覧</div>
+    <div class="app-subtitle">EIGO NO PARTNER ／ 日本語 → 英語</div>
+
+    <div class="al-filters">
+      <div class="section-label">レッスンを選ぶ</div>
+      <div class="lesson-grid">${lessonBtns}</div>
+      ${partBtns}
+    </div>
+
+    <div class="al-tools">
+      <input class="al-search" id="al-search" type="search" placeholder="日本語・英語で検索" value="${esc(state.listQuery)}">
+      <label class="toggle-label"><input type="checkbox" id="al-hide-check" ${state.listHide ? 'checked' : ''}>答えを隠す</label>
+    </div>
+    <div class="al-summary">${filtered.length}問を表示中</div>
+
+    ${body}
+
+    <button class="result-btn al-bottom-btn" id="al-back-bottom-btn" style="margin-top:24px;width:100%;">選択に戻る</button>
+  `;
+
+  const goStart = () => { stopSpeaking(); state.screen = 'start'; render(); };
+  document.getElementById('al-back-btn').addEventListener('click', goStart);
+  document.getElementById('al-back-bottom-btn').addEventListener('click', goStart);
+  app.querySelectorAll('[data-al-lesson]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.listLesson = btn.dataset.alLesson;
+      state.listPart = 'all';
+      render();
+    });
+  });
+  app.querySelectorAll('[data-al-part]').forEach(btn => {
+    btn.addEventListener('click', () => { state.listPart = btn.dataset.alPart; render(); });
+  });
+  document.getElementById('al-hide-check').addEventListener('change', (e) => {
+    state.listHide = e.target.checked;
+    render();
+  });
+  const search = document.getElementById('al-search');
+  search.addEventListener('input', (e) => { state.listQuery = e.target.value; render(); });
+  if (searchFocused) {
+    search.focus();
+    if (caret !== null) search.setSelectionRange(caret, caret);
+  }
+  app.querySelectorAll('.al-audio').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();   // 「答えを隠す」の表示切替と干渉させない
+      speakItem(listShownItems[Number(btn.dataset.alIdx)]);
+    });
+  });
+  app.querySelectorAll('.al-hide .al-row').forEach(row => {
+    row.addEventListener('click', () => row.classList.toggle('revealed'));
   });
 }
 
