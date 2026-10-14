@@ -535,7 +535,30 @@ function deleteHistoryAt(displayIndex, totalLength) {
 }
 
 function getLessonParts(lesson) {
-  return [...new Set(WORDS.filter(w => w.lesson === lesson && w.part !== '').map(w => w.part))];
+  return [...new Set(WORDS.filter(w => w.lesson === lesson && w.part !== '').map(dispPart))];
+}
+
+// ---------- パートの分割（1セット最大10問） ----------
+// 履歴・進捗データは従来どおり lesson/part 単位のまま。出題時だけ part 内を分割する。
+const CHUNK_MAX = 10;
+// 表示上まとめるパート（データ・履歴の part 値は変更しない）
+const PART_GROUPS = { '1': { '2-1': '2', '2-2': '2', '2-3': '2' } };
+function dispPart(w) {
+  const g = PART_GROUPS[w.lesson];
+  return (g && g[w.part]) || w.part;
+}
+function getPartChunks(lesson, part) {
+  const items = WORDS.filter(w => w.lesson === lesson && dispPart(w) === part);
+  const n = Math.max(1, Math.ceil(items.length / CHUNK_MAX));
+  const base = Math.floor(items.length / n), extra = items.length % n;
+  const out = [];
+  let pos = 0;
+  for (let i = 0; i < n; i++) {
+    const size = base + (i < extra ? 1 : 0);
+    out.push(items.slice(pos, pos + size));
+    pos += size;
+  }
+  return out;
 }
 
 function formatDateShort(dateStr) {
@@ -551,12 +574,31 @@ function getProgressGroups() {
     const badges = [];
     // パートのないレッスン（Starter）だけ「すべて」を出す。それ以外はパート単位で進めるため不要
     if (parts.length === 0) badges.push({ badgeLabel: 'すべて', lesson, part: 'all', matchParts: ['all'] });
-    parts.forEach(p => badges.push({ badgeLabel: 'Part ' + p, lesson, part: p, matchParts: [p, 'all'] }));
+    parts.forEach(p => {
+      const chunks = getPartChunks(lesson, p);
+      if (chunks.length === 1) {
+        badges.push({ badgeLabel: 'Part ' + p, lesson, part: p, chunk: null, matchParts: [p, 'all'] });
+      } else {
+        chunks.forEach((items, i) => badges.push({
+          badgeLabel: 'Part ' + p + ' (' + (i + 1) + '/' + chunks.length + ')',
+          lesson, part: p, chunk: i, chunkItems: items, matchParts: [p, 'all'],
+        }));
+      }
+    });
     return { groupLabel: label, badges };
   });
 }
 
 function getBadgeStatus(badge, history) {
+  if (badge.chunkItems) {
+    // 分割セット: 出題済みの問題数で判定（既存の出題済みデータをそのまま利用）
+    const attempted = loadAttempted();
+    const n = badge.chunkItems.filter(w => attempted.has(getWordKey(w))).length;
+    if (n === 0) return { done: false };
+    const parent = history.filter(h => h.lesson === badge.lesson && badge.matchParts.includes(h.part));
+    parent.sort((a, b) => new Date(b.date) - new Date(a.date));
+    return { done: true, chunkOnly: true, latest: parent[0] || null, count: parent.length };
+  }
   const matches = history.filter(h => h.lesson === badge.lesson && badge.matchParts.includes(h.part));
   if (matches.length === 0) return { done: false };
   matches.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -575,20 +617,22 @@ function renderProgressPanel(history) {
       if (status.done) doneCount++;
       const cls = status.done ? 'done' : 'todo';
 
-      const items = b.part === 'all'
-        ? WORDS.filter(w => w.lesson === b.lesson)
-        : WORDS.filter(w => w.lesson === b.lesson && w.part === b.part);
+      const items = b.chunkItems
+        ? b.chunkItems
+        : (b.part === 'all'
+          ? WORDS.filter(w => w.lesson === b.lesson)
+          : WORDS.filter(w => w.lesson === b.lesson && dispPart(w) === b.part));
       const wTotal = items.length;
       const wDone = items.filter(w => attempted.has(getWordKey(w))).length;
 
       const right = status.done
-        ? `<span class="pb-count">${wDone} / ${wTotal}問</span><span class="pb-pct">${status.latest.pct}%</span>`
+        ? `<span class="pb-count">${wDone} / ${wTotal}問</span>${status.chunkOnly ? '' : `<span class="pb-pct">${status.latest.pct}%</span>`}`
         : `<span class="pb-status">未着手</span>`;
       const title = status.done
-        ? `直近: ${formatDateShort(status.latest.date)}（${status.count}回挑戦）`
+        ? (status.latest ? `直近: ${formatDateShort(status.latest.date)}（${status.count}回挑戦）` : '挑戦済み')
         : 'まだ挑戦していません';
       return `
-        <button class="progress-badge ${cls}" data-plesson="${esc(b.lesson)}" data-ppart="${esc(b.part)}" title="${esc(title)}">
+        <button class="progress-badge ${cls}" data-plesson="${esc(b.lesson)}" data-ppart="${esc(b.part)}" data-pchunk="${b.chunk == null ? '' : b.chunk}" title="${esc(title)}">
           <span>${esc(b.badgeLabel)}</span>
           ${right}
         </button>`;
@@ -670,6 +714,7 @@ const state = {
   screen: 'start',
   selectedLesson: null,
   selectedPart: null,
+  selectedChunk: null,
   parts: [],
   queue: [],
   currentIndex: 0,
@@ -709,14 +754,38 @@ function renderStart() {
     </button>`).join('');
 
   let partSection = '';
-  if (state.selectedLesson && state.parts.length > 0) {
-    const partBtns = state.parts.map(p => `
-      <button class="part-btn ${state.selectedPart === p ? 'selected' : ''}" data-part="${esc(p)}">
-        Part ${esc(p)}<span class="btn-count">${WORDS.filter(w => w.lesson === state.selectedLesson && w.part === p).length}問</span>
-      </button>`).join('');
+  if (state.selectedLesson && state.parts.length === 0) {
+    // パートのないレッスン（Starter）も、他と同様に選択してから開始する
+    const n = WORDS.filter(w => w.lesson === state.selectedLesson).length;
+    const attempted = loadAttempted();
+    const done = WORDS.filter(w => w.lesson === state.selectedLesson && attempted.has(getWordKey(w))).length;
     partSection = `
       <div style="margin-top:20px;">
-        <div class="section-label">パートを選ぶ</div>
+        <div class="section-label">パートを選ぶ（1セット最大${CHUNK_MAX}問）</div>
+        <div class="part-row">
+          <button class="part-btn ${state.selectedPart === 'all' ? 'selected' : ''}" data-part="all" data-chunk="">
+            ${state.selectedLesson === 'Starter' ? 'Starter' : 'すべて'}<span class="btn-count">${n}問${done > 0 ? '（' + done + '問済）' : ''}</span>
+          </button>
+        </div>
+      </div>`;
+  } else if (state.selectedLesson && state.parts.length > 0) {
+    const attempted = loadAttempted();
+    const partBtns = state.parts.map(p => {
+      const chunks = getPartChunks(state.selectedLesson, p);
+      return chunks.map((items, i) => {
+        const multi = chunks.length > 1;
+        const sel = state.selectedPart === p && (!multi || state.selectedChunk === i);
+        const done = items.filter(w => attempted.has(getWordKey(w))).length;
+        const label = 'Part ' + esc(p) + (multi ? ' (' + (i + 1) + '/' + chunks.length + ')' : '');
+        return `
+      <button class="part-btn ${sel ? 'selected' : ''}" data-part="${esc(p)}" data-chunk="${multi ? i : ''}">
+        ${label}<span class="btn-count">${items.length}問${done > 0 ? '（' + done + '問済）' : ''}</span>
+      </button>`;
+      }).join('');
+    }).join('');
+    partSection = `
+      <div style="margin-top:20px;">
+        <div class="section-label">パートを選ぶ（1セット最大${CHUNK_MAX}問）</div>
         <div class="part-row">
           ${partBtns}
         </div>
@@ -739,7 +808,7 @@ function renderStart() {
       </label>
     </div>
 
-    <button id="start-btn" class="start-btn" ${(state.selectedLesson === null || (state.parts.length > 0 && !state.selectedPart)) ? 'disabled' : ''}>開始</button>
+    <button id="start-btn" class="start-btn" ${(state.selectedLesson === null || !state.selectedPart) ? 'disabled' : ''}>開始</button>
     <button id="history-btn" class="result-btn" style="width:100%;margin-top:10px;">📊 履歴を見る</button>
     <button id="weak-btn" class="result-btn" style="width:100%;margin-top:10px;">📉 苦手分析</button>
     <button id="list-btn" class="result-btn" style="width:100%;margin-top:10px;">📋 問題・正解一覧</button>
@@ -751,6 +820,7 @@ function renderStart() {
   app.querySelectorAll('[data-part]').forEach(btn => {
     btn.addEventListener('click', () => {
       state.selectedPart = btn.dataset.part;
+      state.selectedChunk = btn.dataset.chunk === '' ? null : Number(btn.dataset.chunk);
       render();
     });
   });
@@ -926,11 +996,12 @@ function renderList() {
 
 function selectLesson(lesson) {
   const parts = [...new Set(
-    WORDS.filter(w => w.lesson === lesson && w.part !== '').map(w => w.part)
+    WORDS.filter(w => w.lesson === lesson && w.part !== '').map(dispPart)
   )];
   state.selectedLesson = lesson;
   // パートのあるレッスンはパート単位で進めるため、未選択から始める（パートのないStarterだけ全体）
-  state.selectedPart = parts.length > 0 ? null : 'all';
+  state.selectedPart = null;
+  state.selectedChunk = null;
   state.parts = parts;
   render();
 }
@@ -939,7 +1010,12 @@ function startQuiz(shuffle) {
   stopSpeaking();
   let items = WORDS.filter(w => w.lesson === state.selectedLesson);
   if (state.selectedPart && state.selectedPart !== 'all') {
-    items = items.filter(w => w.part === state.selectedPart);
+    items = items.filter(w => dispPart(w) === state.selectedPart);
+    const chunks = getPartChunks(state.selectedLesson, state.selectedPart);
+    if (chunks.length > 1) {
+      const ci = state.selectedChunk === null ? 0 : state.selectedChunk;
+      items = chunks[ci] || chunks[0];
+    }
   }
   if (shuffle) items = [...items].sort(() => Math.random() - 0.5);
 
@@ -988,7 +1064,7 @@ function renderQuiz() {
   }
 
   const partLabel = (state.selectedPart && state.selectedPart !== 'all')
-    ? `<span style="color:#d1d5db;margin:0 2px;">/</span><span class="cur">Part ${esc(state.selectedPart)}</span>`
+    ? `<span style="color:#d1d5db;margin:0 2px;">/</span><span class="cur">Part ${esc(state.selectedPart)}${(state.selectedChunk !== null && getPartChunks(state.selectedLesson, state.selectedPart).length > 1) ? ' (セット' + (state.selectedChunk + 1) + ')' : ''}</span>`
     : '';
 
   app.innerHTML = `
@@ -1487,6 +1563,7 @@ function renderHistory() {
       state.selectedLesson = lesson;
       state.parts = getLessonParts(lesson);
       state.selectedPart = part;
+      state.selectedChunk = btn.dataset.pchunk === undefined || btn.dataset.pchunk === '' ? null : Number(btn.dataset.pchunk);
       startQuiz(false);
     });
   });
