@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 サーバー不要・単一HTMLファイルで動作。ブラウザで `english_test.html` を開くだけで使用可能。
 
 - プロジェクト名: `english-test-wsl`（旧 `english-test-win`）
-- 収録範囲: **Starter + Lesson 1〜5 + 人称ドリル（計 781 問）**。Lesson 5 は後から追加したレッスン
+- 収録範囲: **Starter + Lesson 1〜5 + 人称ドリル（計 837 問）**。Lesson 5 は後から追加したレッスン
 - 実行環境: **WSL 上のホーム配下**（例: `~/projects/english-test-wsl`）。
   Windows ローカルのフォルダで作業するとエラーが多発したため WSL へ移設済み（詳細は下記）
 
@@ -25,7 +25,7 @@ cd english-test-wsl
 ## 重要なファイル
 
 - `english_test.html` — アプリ本体（996行）。UI（CSS）、データ読込、クイズロジック、履歴管理が単一ファイルに収まっている
-- `json/words-data.js` — `window.WORDS` 配列（781件）。csv から build.py で生成される単語データ
+- `json/words-data.js` — `window.WORDS` 配列（837件）。csv から build.py で生成される単語データ
 - `build.py` — CSV → JSデータ変換スクリプト（190行・標準ライブラリのみ）
 - `csv/EIGO_NO_PARTNERに出てくる文.csv` — 出典データ（Lesson / Part / 英語 / 日本語 の4列構成）
 - `.python-version` / `pyproject.toml` / `uv.lock` — Python 3.13 を uv で管理
@@ -99,7 +99,7 @@ start (レッスン/パート選択 + 進捗パネル) → quiz (問題表示・
 | 3 | 149 | 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | 4 | 126 | 1, 2, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | 5 | 201 | 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Language Focus, SPECIAL TOPICS, Remember? |
-| 人称ドリル（追加） | 56 | Be動詞, 一般動詞（Lesson 1〜5 とは無関係の人称別ドリル） |
+| 人称ドリル（追加） | 112 | Be動詞, 一般動詞, Be動詞（過去）, 一般動詞（過去）（Lesson 1〜5 とは無関係の人称別ドリル） |
 
 - レッスン/パートの選択肢は `english_test.html` 側にハードコードされていない。
   `const lessons = [...new Set(WORDS.map(w => w.lesson))]` と `getLessonParts()` で動的生成される
