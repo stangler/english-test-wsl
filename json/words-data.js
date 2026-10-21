@@ -7157,14 +7157,27 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Am I a boy?",
-    "ja": "私は男の子ですか？",
+    "en": "Am I a boy? Yes, you are.",
+    "ja": "私は男の子ですか？はい、そうです。",
     "ja_answers": [
-      "私は男の子ですか？",
-      "ぼくは男の子ですか？",
-      "僕は男の子ですか？",
-      "ぼくが男の子ですか？",
-      "僕が男の子ですか？"
+      "私は男の子ですか？はい、そうです。",
+      "ぼくは男の子ですか？はい、そうです。",
+      "僕は男の子ですか？はい、そうです。",
+      "ぼくが男の子ですか？はい、そうです。",
+      "僕が男の子ですか？はい、そうです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Am I a boy? No, you are not.",
+    "ja": "私は男の子ですか？いいえ、違います。",
+    "ja_answers": [
+      "私は男の子ですか？いいえ、違います。",
+      "ぼくは男の子ですか？いいえ、違います。",
+      "僕は男の子ですか？いいえ、違います。",
+      "ぼくが男の子ですか？いいえ、違います。",
+      "僕が男の子ですか？いいえ、違います。"
     ]
   },
   {
@@ -7188,10 +7201,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Are you a girl?",
-    "ja": "あなたは女の子ですか？",
+    "en": "Are you a girl? Yes, I am.",
+    "ja": "あなたは女の子ですか？はい、そうです。",
     "ja_answers": [
-      "あなたは女の子ですか？"
+      "あなたは女の子ですか？はい、そうです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Are you a girl? No, I am not.",
+    "ja": "あなたは女の子ですか？いいえ、違います。",
+    "ja_answers": [
+      "あなたは女の子ですか？いいえ、違います。"
     ]
   },
   {
@@ -7215,10 +7237,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Is he a friend?",
-    "ja": "彼は友だちですか？",
+    "en": "Is he a friend? Yes, he is.",
+    "ja": "彼は友だちですか？はい、そうです。",
     "ja_answers": [
-      "彼は友だちですか？"
+      "彼は友だちですか？はい、そうです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Is he a friend? No, he is not.",
+    "ja": "彼は友だちですか？いいえ、違います。",
+    "ja_answers": [
+      "彼は友だちですか？いいえ、違います。"
     ]
   },
   {
@@ -7242,10 +7273,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Is she a teacher?",
-    "ja": "彼女は先生ですか？",
+    "en": "Is she a teacher? Yes, she is.",
+    "ja": "彼女は先生ですか？はい、そうです。",
     "ja_answers": [
-      "彼女は先生ですか？"
+      "彼女は先生ですか？はい、そうです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Is she a teacher? No, she is not.",
+    "ja": "彼女は先生ですか？いいえ、違います。",
+    "ja_answers": [
+      "彼女は先生ですか？いいえ、違います。"
     ]
   },
   {
@@ -7269,10 +7309,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Is it a bird?",
-    "ja": "それは鳥ですか？",
+    "en": "Is it a bird? Yes, it is.",
+    "ja": "それは鳥ですか？はい、そうです。",
     "ja_answers": [
-      "それは鳥ですか？"
+      "それは鳥ですか？はい、そうです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Is it a bird? No, it is not.",
+    "ja": "それは鳥ですか？いいえ、違います。",
+    "ja_answers": [
+      "それは鳥ですか？いいえ、違います。"
     ]
   },
   {
@@ -7296,10 +7345,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Are we classmates?",
-    "ja": "私たちは同級生ですか？",
+    "en": "Are we classmates? Yes, we are.",
+    "ja": "私たちは同級生ですか？はい、そうです。",
     "ja_answers": [
-      "私たちは同級生ですか？"
+      "私たちは同級生ですか？はい、そうです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Are we classmates? No, we are not.",
+    "ja": "私たちは同級生ですか？いいえ、違います。",
+    "ja_answers": [
+      "私たちは同級生ですか？いいえ、違います。"
     ]
   },
   {
@@ -7323,10 +7381,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Are they friends?",
-    "ja": "彼らは友だちですか？",
+    "en": "Are they friends? Yes, they are.",
+    "ja": "彼らは友だちですか？はい、そうです。",
     "ja_answers": [
-      "彼らは友だちですか？"
+      "彼らは友だちですか？はい、そうです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Are they friends? No, they are not.",
+    "ja": "彼らは友だちですか？いいえ、違います。",
+    "ja_answers": [
+      "彼らは友だちですか？いいえ、違います。"
     ]
   },
   {
@@ -7358,14 +7425,27 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do I study Japanese?",
-    "ja": "私は国語を勉強しますか？",
+    "en": "Do I study Japanese? Yes, you do.",
+    "ja": "私は国語を勉強しますか？はい、勉強します。",
     "ja_answers": [
-      "私は国語を勉強しますか？",
-      "ぼくは国語を勉強しますか？",
-      "僕は国語を勉強しますか？",
-      "ぼくが国語を勉強しますか？",
-      "僕が国語を勉強しますか？"
+      "私は国語を勉強しますか？はい、勉強します。",
+      "ぼくは国語を勉強しますか？はい、勉強します。",
+      "僕は国語を勉強しますか？はい、勉強します。",
+      "ぼくが国語を勉強しますか？はい、勉強します。",
+      "僕が国語を勉強しますか？はい、勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do I study Japanese? No, you do not.",
+    "ja": "私は国語を勉強しますか？いいえ、勉強しません。",
+    "ja_answers": [
+      "私は国語を勉強しますか？いいえ、勉強しません。",
+      "ぼくは国語を勉強しますか？いいえ、勉強しません。",
+      "僕は国語を勉強しますか？いいえ、勉強しません。",
+      "ぼくが国語を勉強しますか？いいえ、勉強しません。",
+      "僕が国語を勉強しますか？いいえ、勉強しません。"
     ]
   },
   {
@@ -7389,10 +7469,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do you study Japanese?",
-    "ja": "あなたは国語を勉強しますか？",
+    "en": "Do you study Japanese? Yes, I do.",
+    "ja": "あなたは国語を勉強しますか？はい、勉強します。",
     "ja_answers": [
-      "あなたは国語を勉強しますか？"
+      "あなたは国語を勉強しますか？はい、勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do you study Japanese? No, I do not.",
+    "ja": "あなたは国語を勉強しますか？いいえ、勉強しません。",
+    "ja_answers": [
+      "あなたは国語を勉強しますか？いいえ、勉強しません。"
     ]
   },
   {
@@ -7416,10 +7505,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Does he study Japanese?",
-    "ja": "彼は国語を勉強しますか？",
+    "en": "Does he study Japanese? Yes, he does.",
+    "ja": "彼は国語を勉強しますか？はい、勉強します。",
     "ja_answers": [
-      "彼は国語を勉強しますか？"
+      "彼は国語を勉強しますか？はい、勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Does he study Japanese? No, he does not.",
+    "ja": "彼は国語を勉強しますか？いいえ、勉強しません。",
+    "ja_answers": [
+      "彼は国語を勉強しますか？いいえ、勉強しません。"
     ]
   },
   {
@@ -7443,10 +7541,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Does she study Japanese?",
-    "ja": "彼女は国語を勉強しますか？",
+    "en": "Does she study Japanese? Yes, she does.",
+    "ja": "彼女は国語を勉強しますか？はい、勉強します。",
     "ja_answers": [
-      "彼女は国語を勉強しますか？"
+      "彼女は国語を勉強しますか？はい、勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Does she study Japanese? No, she does not.",
+    "ja": "彼女は国語を勉強しますか？いいえ、勉強しません。",
+    "ja_answers": [
+      "彼女は国語を勉強しますか？いいえ、勉強しません。"
     ]
   },
   {
@@ -7470,10 +7577,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Does it study?",
-    "ja": "それは勉強しますか？",
+    "en": "Does it study? Yes, it does.",
+    "ja": "それは勉強しますか？はい、勉強します。",
     "ja_answers": [
-      "それは勉強しますか？"
+      "それは勉強しますか？はい、勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Does it study? No, it does not.",
+    "ja": "それは勉強しますか？いいえ、勉強しません。",
+    "ja_answers": [
+      "それは勉強しますか？いいえ、勉強しません。"
     ]
   },
   {
@@ -7497,10 +7613,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do we study Japanese?",
-    "ja": "私たちは国語を勉強しますか？",
+    "en": "Do we study Japanese? Yes, we do.",
+    "ja": "私たちは国語を勉強しますか？はい、勉強します。",
     "ja_answers": [
-      "私たちは国語を勉強しますか？"
+      "私たちは国語を勉強しますか？はい、勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do we study Japanese? No, we do not.",
+    "ja": "私たちは国語を勉強しますか？いいえ、勉強しません。",
+    "ja_answers": [
+      "私たちは国語を勉強しますか？いいえ、勉強しません。"
     ]
   },
   {
@@ -7524,10 +7649,19 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do they study Japanese?",
-    "ja": "彼らは国語を勉強しますか？",
+    "en": "Do they study Japanese? Yes, they do.",
+    "ja": "彼らは国語を勉強しますか？はい、勉強します。",
     "ja_answers": [
-      "彼らは国語を勉強しますか？"
+      "彼らは国語を勉強しますか？はい、勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do they study Japanese? No, they do not.",
+    "ja": "彼らは国語を勉強しますか？いいえ、勉強しません。",
+    "ja_answers": [
+      "彼らは国語を勉強しますか？いいえ、勉強しません。"
     ]
   }
 ];

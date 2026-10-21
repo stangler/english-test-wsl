@@ -46,7 +46,7 @@ cd english-test-wsl
 
 ## 収録レッスン
 
-EIGO NO PARTNER の **Starter + Lesson 1〜5 + 人称ドリル** を収録しています（計 767 問）。
+EIGO NO PARTNER の **Starter + Lesson 1〜5 + 人称ドリル** を収録しています（計 781 問）。
 Lesson 5 は後から追加したレッスンです。
 
 | レッスン | 問題数 | 主なパート |
@@ -57,7 +57,7 @@ Lesson 5 は後から追加したレッスンです。
 | Lesson 3 | 149 | Part 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | Lesson 4 | 126 | Part 1, 2, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | **Lesson 5**（追加） | **201** | Part 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Language Focus, SPECIAL TOPICS, Remember? |
-| 人称ドリル（追加） | 42 | Be動詞, 一般動詞（Lesson 1〜5 とは無関係の人称別ドリル） |
+| 人称ドリル（追加） | 56 | Be動詞, 一般動詞（Lesson 1〜5 とは無関係の人称別ドリル） |
 
 レッスンとパートの一覧はデータ（`json/words-data.js`）から動的に生成されるため、
 CSV を更新して再生成すればそのまま選択肢に反映されます。
@@ -246,7 +246,7 @@ uv run python build.py
   間違い回数ランキング・レッスン/パート別・誤答タイプ別・英文の特徴別の誤答率を確認できるように変更
   （JSONエクスポート付き）
 - **Lesson 5 を追加**（201問）。収録範囲が Starter + Lesson 1〜5（計 725 問）に拡大
-- **人称ドリルを追加**（42問・Be動詞 / 一般動詞）。レッスン名が数字以外でも表示できるよう表示処理を共通化。収録範囲が計 767 問に拡大
+- **人称ドリルを追加**（56問・Be動詞 / 一般動詞。疑問文はYes/No応答つきの問題のみ収録）。レッスン名が数字以外でも表示できるよう表示処理を共通化。収録範囲が計 781 問に拡大
 - **プロジェクト名を `english-test-win` → `english-test-wsl` に変更**
 - Windows ローカルで作業するとエラーが多発するため、**WSL 上にプロジェクトを移設**し、
   GitHub（`stangler/english-test-wsl`）からクローンして作業する運用に変更
