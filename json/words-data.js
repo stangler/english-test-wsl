@@ -7144,7 +7144,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "I am not busy.",
+    "en": "I'm not busy.",
     "ja": "私は忙しくありません。",
     "ja_answers": [
       "私は忙しくありません。",
@@ -7170,7 +7170,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Am I a student? No, you are not.",
+    "en": "Am I a student? No, you aren't.",
     "ja": "私は生徒ですか？いいえ、違います。",
     "ja_answers": [
       "私は生徒ですか？いいえ、違います。",
@@ -7192,7 +7192,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "You are not a teacher.",
+    "en": "You aren't a teacher.",
     "ja": "あなたは先生ではありません。",
     "ja_answers": [
       "あなたは先生ではありません。"
@@ -7210,7 +7210,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Are you a singer? No, I am not.",
+    "en": "Are you a singer? No, I'm not.",
     "ja": "あなたは歌手ですか？いいえ、違います。",
     "ja_answers": [
       "あなたは歌手ですか？いいえ、違います。"
@@ -7228,7 +7228,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "He is not a teacher.",
+    "en": "He isn't a teacher.",
     "ja": "彼は先生ではありません。",
     "ja_answers": [
       "彼は先生ではありません。"
@@ -7246,7 +7246,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Is he a friend? No, he is not.",
+    "en": "Is he a friend? No, he isn't.",
     "ja": "彼は友だちですか？いいえ、違います。",
     "ja_answers": [
       "彼は友だちですか？いいえ、違います。"
@@ -7264,7 +7264,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "She is not busy.",
+    "en": "She isn't busy.",
     "ja": "彼女は忙しくありません。",
     "ja_answers": [
       "彼女は忙しくありません。"
@@ -7282,7 +7282,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Is she a teacher? No, she is not.",
+    "en": "Is she a teacher? No, she isn't.",
     "ja": "彼女は先生ですか？いいえ、違います。",
     "ja_answers": [
       "彼女は先生ですか？いいえ、違います。"
@@ -7300,7 +7300,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "It is not a cat.",
+    "en": "It isn't a cat.",
     "ja": "それはネコではありません。",
     "ja_answers": [
       "それはネコではありません。"
@@ -7318,7 +7318,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Is it a bird? No, it is not.",
+    "en": "Is it a bird? No, it isn't.",
     "ja": "それは鳥ですか？いいえ、違います。",
     "ja_answers": [
       "それは鳥ですか？いいえ、違います。"
@@ -7336,7 +7336,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "We are not teachers.",
+    "en": "We aren't teachers.",
     "ja": "私たちは先生ではありません。",
     "ja_answers": [
       "私たちは先生ではありません。"
@@ -7354,7 +7354,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Are we classmates? No, we are not.",
+    "en": "Are we classmates? No, we aren't.",
     "ja": "私たちは同級生ですか？いいえ、違います。",
     "ja_answers": [
       "私たちは同級生ですか？いいえ、違います。"
@@ -7372,7 +7372,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "They are not doctors.",
+    "en": "They aren't doctors.",
     "ja": "彼らは医者ではありません。",
     "ja_answers": [
       "彼らは医者ではありません。"
@@ -7390,7 +7390,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞",
-    "en": "Are they friends? No, they are not.",
+    "en": "Are they friends? No, they aren't.",
     "ja": "彼らは友だちですか？いいえ、違います。",
     "ja_answers": [
       "彼らは友だちですか？いいえ、違います。"
@@ -7412,7 +7412,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "I do not study math.",
+    "en": "I don't study math.",
     "ja": "私は数学を勉強しません。",
     "ja_answers": [
       "私は数学を勉強しません。",
@@ -7438,7 +7438,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do I study Japanese? No, you do not.",
+    "en": "Do I study Japanese? No, you don't.",
     "ja": "私は国語を勉強しますか？いいえ、勉強しません。",
     "ja_answers": [
       "私は国語を勉強しますか？いいえ、勉強しません。",
@@ -7460,7 +7460,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "You do not study math.",
+    "en": "You don't study math.",
     "ja": "あなたは数学を勉強しません。",
     "ja_answers": [
       "あなたは数学を勉強しません。"
@@ -7478,7 +7478,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do you study Japanese? No, I do not.",
+    "en": "Do you study Japanese? No, I don't.",
     "ja": "あなたは国語を勉強しますか？いいえ、勉強しません。",
     "ja_answers": [
       "あなたは国語を勉強しますか？いいえ、勉強しません。"
@@ -7496,7 +7496,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "He does not study math.",
+    "en": "He doesn't study math.",
     "ja": "彼は数学を勉強しません。",
     "ja_answers": [
       "彼は数学を勉強しません。"
@@ -7514,7 +7514,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Does he study Japanese? No, he does not.",
+    "en": "Does he study Japanese? No, he doesn't.",
     "ja": "彼は国語を勉強しますか？いいえ、勉強しません。",
     "ja_answers": [
       "彼は国語を勉強しますか？いいえ、勉強しません。"
@@ -7532,7 +7532,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "She does not study math.",
+    "en": "She doesn't study math.",
     "ja": "彼女は数学を勉強しません。",
     "ja_answers": [
       "彼女は数学を勉強しません。"
@@ -7550,7 +7550,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Does she study Japanese? No, she does not.",
+    "en": "Does she study Japanese? No, she doesn't.",
     "ja": "彼女は国語を勉強しますか？いいえ、勉強しません。",
     "ja_answers": [
       "彼女は国語を勉強しますか？いいえ、勉強しません。"
@@ -7568,7 +7568,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "It does not study.",
+    "en": "It doesn't study.",
     "ja": "それは勉強しません。",
     "ja_answers": [
       "それは勉強しません。"
@@ -7586,7 +7586,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Does it study? No, it does not.",
+    "en": "Does it study? No, it doesn't.",
     "ja": "それは勉強しますか？いいえ、勉強しません。",
     "ja_answers": [
       "それは勉強しますか？いいえ、勉強しません。"
@@ -7604,7 +7604,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "We do not study math.",
+    "en": "We don't study math.",
     "ja": "私たちは数学を勉強しません。",
     "ja_answers": [
       "私たちは数学を勉強しません。"
@@ -7622,7 +7622,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do we study Japanese? No, we do not.",
+    "en": "Do we study Japanese? No, we don't.",
     "ja": "私たちは国語を勉強しますか？いいえ、勉強しません。",
     "ja_answers": [
       "私たちは国語を勉強しますか？いいえ、勉強しません。"
@@ -7640,7 +7640,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "They do not study math.",
+    "en": "They don't study math.",
     "ja": "彼らは数学を勉強しません。",
     "ja_answers": [
       "彼らは数学を勉強しません。"
@@ -7658,7 +7658,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞",
-    "en": "Do they study Japanese? No, they do not.",
+    "en": "Do they study Japanese? No, they don't.",
     "ja": "彼らは国語を勉強しますか？いいえ、勉強しません。",
     "ja_answers": [
       "彼らは国語を勉強しますか？いいえ、勉強しません。"
@@ -7680,7 +7680,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "I was not busy.",
+    "en": "I wasn't busy.",
     "ja": "私は忙しくありませんでした。",
     "ja_answers": [
       "私は忙しくありませんでした。",
@@ -7706,7 +7706,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "Was I a student? No, you were not.",
+    "en": "Was I a student? No, you weren't.",
     "ja": "私は生徒でしたか？いいえ、そうではありませんでした。",
     "ja_answers": [
       "私は生徒でしたか？いいえ、そうではありませんでした。",
@@ -7728,7 +7728,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "You were not a teacher.",
+    "en": "You weren't a teacher.",
     "ja": "あなたは先生ではありませんでした。",
     "ja_answers": [
       "あなたは先生ではありませんでした。"
@@ -7746,7 +7746,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "Were you a singer? No, I was not.",
+    "en": "Were you a singer? No, I wasn't.",
     "ja": "あなたは歌手でしたか？いいえ、そうではありませんでした。",
     "ja_answers": [
       "あなたは歌手でしたか？いいえ、そうではありませんでした。"
@@ -7764,7 +7764,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "He was not a teacher.",
+    "en": "He wasn't a teacher.",
     "ja": "彼は先生ではありませんでした。",
     "ja_answers": [
       "彼は先生ではありませんでした。"
@@ -7782,7 +7782,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "Was he a friend? No, he was not.",
+    "en": "Was he a friend? No, he wasn't.",
     "ja": "彼は友だちでしたか？いいえ、そうではありませんでした。",
     "ja_answers": [
       "彼は友だちでしたか？いいえ、そうではありませんでした。"
@@ -7800,7 +7800,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "She was not busy.",
+    "en": "She wasn't busy.",
     "ja": "彼女は忙しくありませんでした。",
     "ja_answers": [
       "彼女は忙しくありませんでした。"
@@ -7818,7 +7818,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "Was she a teacher? No, she was not.",
+    "en": "Was she a teacher? No, she wasn't.",
     "ja": "彼女は先生でしたか？いいえ、そうではありませんでした。",
     "ja_answers": [
       "彼女は先生でしたか？いいえ、そうではありませんでした。"
@@ -7836,7 +7836,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "It was not a cat.",
+    "en": "It wasn't a cat.",
     "ja": "それはネコではありませんでした。",
     "ja_answers": [
       "それはネコではありませんでした。"
@@ -7854,7 +7854,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "Was it a bird? No, it was not.",
+    "en": "Was it a bird? No, it wasn't.",
     "ja": "それは鳥でしたか？いいえ、そうではありませんでした。",
     "ja_answers": [
       "それは鳥でしたか？いいえ、そうではありませんでした。"
@@ -7872,7 +7872,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "We were not teachers.",
+    "en": "We weren't teachers.",
     "ja": "私たちは先生ではありませんでした。",
     "ja_answers": [
       "私たちは先生ではありませんでした。"
@@ -7890,7 +7890,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "Were we classmates? No, we were not.",
+    "en": "Were we classmates? No, we weren't.",
     "ja": "私たちは同級生でしたか？いいえ、そうではありませんでした。",
     "ja_answers": [
       "私たちは同級生でしたか？いいえ、そうではありませんでした。"
@@ -7908,7 +7908,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "They were not doctors.",
+    "en": "They weren't doctors.",
     "ja": "彼らは医者ではありませんでした。",
     "ja_answers": [
       "彼らは医者ではありませんでした。"
@@ -7926,7 +7926,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "Be動詞（過去）",
-    "en": "Were they friends? No, they were not.",
+    "en": "Were they friends? No, they weren't.",
     "ja": "彼らは友だちでしたか？いいえ、そうではありませんでした。",
     "ja_answers": [
       "彼らは友だちでしたか？いいえ、そうではありませんでした。"
@@ -7948,7 +7948,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "I did not study math.",
+    "en": "I didn't study math.",
     "ja": "私は数学を勉強しませんでした。",
     "ja_answers": [
       "私は数学を勉強しませんでした。",
@@ -7974,7 +7974,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "Did I study Japanese? No, you did not.",
+    "en": "Did I study Japanese? No, you didn't.",
     "ja": "私は国語を勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "私は国語を勉強しましたか？いいえ、勉強しませんでした。",
@@ -7996,7 +7996,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "You did not study math.",
+    "en": "You didn't study math.",
     "ja": "あなたは数学を勉強しませんでした。",
     "ja_answers": [
       "あなたは数学を勉強しませんでした。"
@@ -8014,7 +8014,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "Did you study Japanese? No, I did not.",
+    "en": "Did you study Japanese? No, I didn't.",
     "ja": "あなたは国語を勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "あなたは国語を勉強しましたか？いいえ、勉強しませんでした。"
@@ -8032,7 +8032,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "He did not study math.",
+    "en": "He didn't study math.",
     "ja": "彼は数学を勉強しませんでした。",
     "ja_answers": [
       "彼は数学を勉強しませんでした。"
@@ -8050,7 +8050,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "Did he study Japanese? No, he did not.",
+    "en": "Did he study Japanese? No, he didn't.",
     "ja": "彼は国語を勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "彼は国語を勉強しましたか？いいえ、勉強しませんでした。"
@@ -8068,7 +8068,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "She did not study math.",
+    "en": "She didn't study math.",
     "ja": "彼女は数学を勉強しませんでした。",
     "ja_answers": [
       "彼女は数学を勉強しませんでした。"
@@ -8086,7 +8086,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "Did she study Japanese? No, she did not.",
+    "en": "Did she study Japanese? No, she didn't.",
     "ja": "彼女は国語を勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "彼女は国語を勉強しましたか？いいえ、勉強しませんでした。"
@@ -8104,7 +8104,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "It did not study.",
+    "en": "It didn't study.",
     "ja": "それは勉強しませんでした。",
     "ja_answers": [
       "それは勉強しませんでした。"
@@ -8122,7 +8122,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "Did it study? No, it did not.",
+    "en": "Did it study? No, it didn't.",
     "ja": "それは勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "それは勉強しましたか？いいえ、勉強しませんでした。"
@@ -8140,7 +8140,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "We did not study math.",
+    "en": "We didn't study math.",
     "ja": "私たちは数学を勉強しませんでした。",
     "ja_answers": [
       "私たちは数学を勉強しませんでした。"
@@ -8158,7 +8158,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "Did we study Japanese? No, we did not.",
+    "en": "Did we study Japanese? No, we didn't.",
     "ja": "私たちは国語を勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "私たちは国語を勉強しましたか？いいえ、勉強しませんでした。"
@@ -8176,7 +8176,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "They did not study math.",
+    "en": "They didn't study math.",
     "ja": "彼らは数学を勉強しませんでした。",
     "ja_answers": [
       "彼らは数学を勉強しませんでした。"
@@ -8194,7 +8194,7 @@ window.WORDS = [
   {
     "lesson": "人称ドリル",
     "part": "一般動詞（過去）",
-    "en": "Did they study Japanese? No, they did not.",
+    "en": "Did they study Japanese? No, they didn't.",
     "ja": "彼らは国語を勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "彼らは国語を勉強しましたか？いいえ、勉強しませんでした。"

@@ -57,7 +57,7 @@ Lesson 5 は後から追加したレッスンです。
 | Lesson 3 | 149 | Part 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | Lesson 4 | 126 | Part 1, 2, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | **Lesson 5**（追加） | **201** | Part 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Language Focus, SPECIAL TOPICS, Remember? |
-| 人称ドリル（追加） | 112 | Be動詞, 一般動詞, Be動詞（過去）, 一般動詞（過去）（Lesson 1〜5 とは無関係の人称別ドリル） |
+| 人称ドリル（追加） | 112 | Be動詞, 一般動詞, Be動詞（過去）, 一般動詞（過去）（Lesson 1〜5 とは無関係の人称別ドリル。否定は短縮形で表示、非短縮形の入力も正解） |
 
 レッスンとパートの一覧はデータ（`json/words-data.js`）から動的に生成されるため、
 CSV を更新して再生成すればそのまま選択肢に反映されます。

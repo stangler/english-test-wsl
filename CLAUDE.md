@@ -99,7 +99,7 @@ start (レッスン/パート選択 + 進捗パネル) → quiz (問題表示・
 | 3 | 149 | 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | 4 | 126 | 1, 2, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Take Action!, SPECIAL TOPICS |
 | 5 | 201 | 1〜3, 学んだことを整理する1/2, 学んだことを活用する1/2, Goal Activity, Language Focus, SPECIAL TOPICS, Remember? |
-| 人称ドリル（追加） | 112 | Be動詞, 一般動詞, Be動詞（過去）, 一般動詞（過去）（Lesson 1〜5 とは無関係の人称別ドリル） |
+| 人称ドリル（追加） | 112 | Be動詞, 一般動詞, Be動詞（過去）, 一般動詞（過去）（Lesson 1〜5 とは無関係の人称別ドリル。否定は短縮形で表示、非短縮形の入力も正解） |
 
 - レッスン/パートの選択肢は `english_test.html` 側にハードコードされていない。
   `const lessons = [...new Set(WORDS.map(w => w.lesson))]` と `getLessonParts()` で動的生成される
