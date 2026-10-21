@@ -534,6 +534,11 @@ function deleteHistoryAt(displayIndex, totalLength) {
   }
 }
 
+// レッスン表示名: 数字なら「Lesson N」、Starter や任意名（人称ドリル等）はそのまま表示
+function lessonDisp(l) {
+  return /^\d+$/.test(l) ? 'Lesson ' + l : l;
+}
+
 function getLessonParts(lesson) {
   return [...new Set(WORDS.filter(w => w.lesson === lesson && w.part !== '').map(dispPart))];
 }
@@ -569,7 +574,7 @@ function formatDateShort(dateStr) {
 // ---------- 進捗パネル（レッスン/パートごとの着手状況） ----------
 function getProgressGroups() {
   return lessons.map(lesson => {
-    const label = lesson === 'Starter' ? 'Starter' : 'Lesson ' + lesson;
+    const label = lessonDisp(lesson);
     const parts = getLessonParts(lesson);
     const badges = [];
     // パートのないレッスン（Starter）だけ「すべて」を出す。それ以外はパート単位で進めるため不要
@@ -662,7 +667,7 @@ function renderPerGroupCharts(history) {
 
   return keys.map(key => {
     const [lesson, part] = key.split('||');
-    const lessonLabel = lesson === 'Starter' ? 'Starter' : 'Lesson ' + lesson;
+    const lessonLabel = lessonDisp(lesson);
     const partLabel = (part && part !== 'all') ? ' / Part ' + part : ' / すべて';
     const sorted = groups[key].slice().sort((a, b) => new Date(a.date) - new Date(b.date)).slice(-20);
     return `
@@ -750,7 +755,7 @@ function render() {
 function renderStart() {
   const lessonBtns = lessons.map(l => `
     <button class="lesson-btn ${state.selectedLesson === l ? 'selected' : ''}" data-lesson="${esc(l)}">
-      ${l === 'Starter' ? 'Starter' : 'Lesson ' + esc(l)}<span class="btn-count">${WORDS.filter(w => w.lesson === l).length}問</span>
+      ${esc(lessonDisp(l))}<span class="btn-count">${WORDS.filter(w => w.lesson === l).length}問</span>
     </button>`).join('');
 
   let partSection = '';
@@ -869,7 +874,7 @@ let listShownItems = [];
 function renderList() {
   if (!state.listLesson) state.listLesson = lessons[0] || null;
   stopSpeaking();
-  const lessonName = (l) => (l === 'Starter' ? 'Starter' : 'Lesson ' + l);
+  const lessonName = lessonDisp;
   const partName = (p) => (/^\d/.test(p) ? 'Part ' + p : p);
 
   const inLesson = WORDS.filter(w => w.lesson === state.listLesson);
@@ -1074,7 +1079,7 @@ function renderQuiz() {
     </div>
     <div class="location-indicator">
       <span>📖</span>
-      <span class="cur">${state.selectedLesson === 'Starter' ? 'Starter' : 'Lesson ' + esc(state.selectedLesson)}</span>
+      <span class="cur">${esc(lessonDisp(state.selectedLesson))}</span>
       ${partLabel}
     </div>
     <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
@@ -1283,7 +1288,7 @@ function renderWeak() {
     (b.wrong / b.attempts) - (a.wrong / a.attempts) ||
     String(b.lastWrongAt).localeCompare(String(a.lastWrongAt))
   ).slice(0, 30);
-  const lessonLabel = (r) => (r.lesson === 'Starter' ? 'Starter' : 'Lesson ' + r.lesson) + (r.part ? ' / Part ' + r.part : '');
+  const lessonLabel = (r) => lessonDisp(r.lesson) + (r.part ? ' / Part ' + r.part : '');
   const rankingHtml = ranking.length === 0
     ? '<div class="empty-msg">間違えた問題はまだありません。</div>'
     : ranking.map((r, i) => {
@@ -1437,7 +1442,7 @@ function renderHistory() {
 
   const partStats = getPartStatistics(fullHistory);
   const filterablePartStatsHtml = partStats.map(s => {
-    const lessonLabel = s.lesson === 'Starter' ? 'Starter' : 'Lesson ' + esc(s.lesson);
+    const lessonLabel = esc(lessonDisp(s.lesson));
     const partLabel = (s.part && s.part !== 'all') ? ' / Part ' + esc(s.part) : '';
     const isActive = `${s.lesson}||${s.part}` === activeBadgeKey;
     const badgeCls = isActive ? 'done' : '';
@@ -1468,7 +1473,7 @@ function renderHistory() {
   const listHtml = history.map((r, i) => {
     const d = new Date(r.date);
     const dateStr = `${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-    const lessonLabel = r.lesson === 'Starter' ? 'Starter' : 'Lesson ' + esc(r.lesson);
+    const lessonLabel = esc(lessonDisp(r.lesson));
     const partLabel = (r.part && r.part !== 'all') ? ` / Part ${esc(r.part)}` : '';
     return `
       <div class="mistake-item history-row" style="border-left-color: ${r.pct >= 80 ? 'var(--green)' : r.pct >= 50 ? 'var(--gold)' : 'var(--red)'};">
@@ -1481,7 +1486,7 @@ function renderHistory() {
   // フィルターバー
   const filterBarHtml = filter
     ? `<div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
-         <span style="font-size:13px; font-weight:600; color:var(--blue);">🔍 フィルター: ${filter.lesson === 'Starter' ? 'Starter' : 'Lesson ' + esc(filter.lesson)}${(filter.part && filter.part !== 'all') ? ' / Part ' + esc(filter.part) : ''}</span>
+         <span style="font-size:13px; font-weight:600; color:var(--blue);">🔍 フィルター: ${esc(lessonDisp(filter.lesson))}${(filter.part && filter.part !== 'all') ? ' / Part ' + esc(filter.part) : ''}</span>
          <button class="part-btn" id="clear-filter-btn" style="background: var(--blue); color: #fff; border-color: var(--blue);">✕ クリア</button>
        </div>`
     : '';

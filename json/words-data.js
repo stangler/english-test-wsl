@@ -2753,7 +2753,7 @@ window.WORDS = [
     "en": "open",
     "ja": "あいている、営業中で",
     "ja_answers": [
-      "あいえている",
+      "あいている",
       "営業中で"
     ]
   },
@@ -4560,7 +4560,8 @@ window.WORDS = [
     "en": "My friend and I enjoyed many places in town, and I really recommend these three!!!",
     "ja": "私の友達と私は町のたくさんの場所を楽しみました、そして私はこれらの３つを本当におすすめします!!!",
     "ja_answers": [
-      "私の友達と私は町のたくさんの場所を楽しみました、そして私はこれらの３つを本当におすすめします!!!"
+      "私の友達と私は町のたくさんの場所を楽しみました",
+      "そして私はこれらの３つを本当におすすめします!!!"
     ]
   },
   {
@@ -7125,6 +7126,408 @@ window.WORDS = [
     "ja": "私たちの学校は新しくありません。",
     "ja_answers": [
       "私たちの学校は新しくありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "I am a teacher.",
+    "ja": "私は先生です。",
+    "ja_answers": [
+      "私は先生です。",
+      "ぼくは先生です。",
+      "僕は先生です。",
+      "ぼくが先生です。",
+      "僕が先生です。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "I am not busy.",
+    "ja": "私は忙しくありません。",
+    "ja_answers": [
+      "私は忙しくありません。",
+      "ぼくは忙しくありません。",
+      "僕は忙しくありません。",
+      "ぼくが忙しくありません。",
+      "僕が忙しくありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Am I a boy?",
+    "ja": "私は男の子ですか？",
+    "ja_answers": [
+      "私は男の子ですか？",
+      "ぼくは男の子ですか？",
+      "僕は男の子ですか？",
+      "ぼくが男の子ですか？",
+      "僕が男の子ですか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "You are a friend.",
+    "ja": "あなたは友だちです。",
+    "ja_answers": [
+      "あなたは友だちです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "You are not a teacher.",
+    "ja": "あなたは先生ではありません。",
+    "ja_answers": [
+      "あなたは先生ではありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Are you a girl?",
+    "ja": "あなたは女の子ですか？",
+    "ja_answers": [
+      "あなたは女の子ですか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "He is a boy.",
+    "ja": "彼は男の子です。",
+    "ja_answers": [
+      "彼は男の子です。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "He is not a teacher.",
+    "ja": "彼は先生ではありません。",
+    "ja_answers": [
+      "彼は先生ではありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Is he a friend?",
+    "ja": "彼は友だちですか？",
+    "ja_answers": [
+      "彼は友だちですか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "She is a girl.",
+    "ja": "彼女は女の子です。",
+    "ja_answers": [
+      "彼女は女の子です。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "She is not busy.",
+    "ja": "彼女は忙しくありません。",
+    "ja_answers": [
+      "彼女は忙しくありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Is she a teacher?",
+    "ja": "彼女は先生ですか？",
+    "ja_answers": [
+      "彼女は先生ですか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "It is a dog.",
+    "ja": "それはイヌです。",
+    "ja_answers": [
+      "それはイヌです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "It is not a cat.",
+    "ja": "それはネコではありません。",
+    "ja_answers": [
+      "それはネコではありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Is it a bird?",
+    "ja": "それは鳥ですか？",
+    "ja_answers": [
+      "それは鳥ですか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "We are friends.",
+    "ja": "私たちは友だちです。",
+    "ja_answers": [
+      "私たちは友だちです。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "We are not teachers.",
+    "ja": "私たちは先生ではありません。",
+    "ja_answers": [
+      "私たちは先生ではありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Are we classmates?",
+    "ja": "私たちは同級生ですか？",
+    "ja_answers": [
+      "私たちは同級生ですか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "They are boys.",
+    "ja": "彼らは男の子です。",
+    "ja_answers": [
+      "彼らは男の子です。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "They are not girls.",
+    "ja": "彼らは女の子ではありません。",
+    "ja_answers": [
+      "彼らは女の子ではありません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "Be動詞",
+    "en": "Are they friends?",
+    "ja": "彼らは友だちですか？",
+    "ja_answers": [
+      "彼らは友だちですか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "I study English every day.",
+    "ja": "私は毎日英語を勉強します。",
+    "ja_answers": [
+      "私は毎日英語を勉強します。",
+      "ぼくは毎日英語を勉強します。",
+      "僕は毎日英語を勉強します。",
+      "ぼくが毎日英語を勉強します。",
+      "僕が毎日英語を勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "I do not study math.",
+    "ja": "私は数学を勉強しません。",
+    "ja_answers": [
+      "私は数学を勉強しません。",
+      "ぼくは数学を勉強しません。",
+      "僕は数学を勉強しません。",
+      "ぼくが数学を勉強しません。",
+      "僕が数学を勉強しません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do I study Japanese?",
+    "ja": "私は国語を勉強しますか？",
+    "ja_answers": [
+      "私は国語を勉強しますか？",
+      "ぼくは国語を勉強しますか？",
+      "僕は国語を勉強しますか？",
+      "ぼくが国語を勉強しますか？",
+      "僕が国語を勉強しますか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "You study English.",
+    "ja": "あなたは英語を勉強します。",
+    "ja_answers": [
+      "あなたは英語を勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "You do not study math.",
+    "ja": "あなたは数学を勉強しません。",
+    "ja_answers": [
+      "あなたは数学を勉強しません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do you study Japanese?",
+    "ja": "あなたは国語を勉強しますか？",
+    "ja_answers": [
+      "あなたは国語を勉強しますか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "He studies English.",
+    "ja": "彼は英語を勉強します。",
+    "ja_answers": [
+      "彼は英語を勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "He does not study math.",
+    "ja": "彼は数学を勉強しません。",
+    "ja_answers": [
+      "彼は数学を勉強しません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Does he study Japanese?",
+    "ja": "彼は国語を勉強しますか？",
+    "ja_answers": [
+      "彼は国語を勉強しますか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "She studies English.",
+    "ja": "彼女は英語を勉強します。",
+    "ja_answers": [
+      "彼女は英語を勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "She does not study math.",
+    "ja": "彼女は数学を勉強しません。",
+    "ja_answers": [
+      "彼女は数学を勉強しません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Does she study Japanese?",
+    "ja": "彼女は国語を勉強しますか？",
+    "ja_answers": [
+      "彼女は国語を勉強しますか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "It studies hard.",
+    "ja": "それは一生懸命勉強します。",
+    "ja_answers": [
+      "それは一生懸命勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "It does not study.",
+    "ja": "それは勉強しません。",
+    "ja_answers": [
+      "それは勉強しません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Does it study?",
+    "ja": "それは勉強しますか？",
+    "ja_answers": [
+      "それは勉強しますか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "We study English.",
+    "ja": "私たちは英語を勉強します。",
+    "ja_answers": [
+      "私たちは英語を勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "We do not study math.",
+    "ja": "私たちは数学を勉強しません。",
+    "ja_answers": [
+      "私たちは数学を勉強しません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do we study Japanese?",
+    "ja": "私たちは国語を勉強しますか？",
+    "ja_answers": [
+      "私たちは国語を勉強しますか？"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "They study English.",
+    "ja": "彼らは英語を勉強します。",
+    "ja_answers": [
+      "彼らは英語を勉強します。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "They do not study math.",
+    "ja": "彼らは数学を勉強しません。",
+    "ja_answers": [
+      "彼らは数学を勉強しません。"
+    ]
+  },
+  {
+    "lesson": "人称ドリル",
+    "part": "一般動詞",
+    "en": "Do they study Japanese?",
+    "ja": "彼らは国語を勉強しますか？",
+    "ja_answers": [
+      "彼らは国語を勉強しますか？"
     ]
   }
 ];
