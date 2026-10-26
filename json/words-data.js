@@ -7129,6 +7129,1726 @@ window.WORDS = [
     ]
   },
   {
+    "lesson": "6",
+    "part": "1",
+    "en": "I watch TV every day.",
+    "ja": "私は毎日、テレビを見ます。",
+    "ja_answers": [
+      "私は毎日、テレビを見ます。",
+      "ぼくは毎日、テレビを見ます。",
+      "僕は毎日、テレビを見ます。",
+      "ぼくが毎日、テレビを見ます。",
+      "僕が毎日、テレビを見ます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "I am watching TV now.",
+    "ja": "私は今、テレビを見ています。",
+    "ja_answers": [
+      "私は今、テレビを見ています。",
+      "ぼくは今、テレビを見ています。",
+      "僕は今、テレビを見ています。",
+      "ぼくが今、テレビを見ています。",
+      "僕が今、テレビを見ています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "I am studying English now.",
+    "ja": "私は今、英語を勉強しています。",
+    "ja_answers": [
+      "私は今、英語を勉強しています。",
+      "ぼくは今、英語を勉強しています。",
+      "僕は今、英語を勉強しています。",
+      "ぼくが今、英語を勉強しています。",
+      "僕が今、英語を勉強しています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "I am making curry.",
+    "ja": "私はカレーを作っています。",
+    "ja_answers": [
+      "私はカレーを作っています。",
+      "ぼくはカレーを作っています。",
+      "僕はカレーを作っています。",
+      "ぼくがカレーを作っています。",
+      "僕がカレーを作っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "She is reading a book now.",
+    "ja": "彼女は今、本を読んでいます。",
+    "ja_answers": [
+      "彼女は今、本を読んでいます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "They are playing soccer now.",
+    "ja": "彼らは今、サッカーをしています。",
+    "ja_answers": [
+      "彼らは今、サッカーをしています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "I'm going to school now.",
+    "ja": "私は今、学校に向かっています。",
+    "ja_answers": [
+      "私は今、学校に向かっています。",
+      "ぼくは今、学校に向かっています。",
+      "僕は今、学校に向かっています。",
+      "ぼくが今、学校に向かっています。",
+      "僕が今、学校に向かっています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "Ken is watching TV now.",
+    "ja": "ケンは今、テレビを見ています。",
+    "ja_answers": [
+      "ケンは今、テレビを見ています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "My father is cooking now.",
+    "ja": "私の父は今、料理をしています。",
+    "ja_answers": [
+      "私の父は今、料理をしています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "She's taking a class now.",
+    "ja": "彼女は今、授業を受けています。",
+    "ja_answers": [
+      "彼女は今、授業を受けています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "A dog is swimming in the sea.",
+    "ja": "イヌが海を泳いでいます。",
+    "ja_answers": [
+      "イヌが海を泳いでいます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "I am making lunch now.",
+    "ja": "私は今、昼食を作っています。",
+    "ja_answers": [
+      "私は今、昼食を作っています。",
+      "ぼくは今、昼食を作っています。",
+      "僕は今、昼食を作っています。",
+      "ぼくが今、昼食を作っています。",
+      "僕が今、昼食を作っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "We are using this room now.",
+    "ja": "私たちは今、この部屋を使っています。",
+    "ja_answers": [
+      "私たちは今、この部屋を使っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "I am eating an apple now.",
+    "ja": "ぼくは今、リンゴを食べています。",
+    "ja_answers": [
+      "ぼくは今、リンゴを食べています。",
+      "私は今、リンゴを食べています。",
+      "ぼくが今、リンゴを食べています。",
+      "僕が今、リンゴを食べています。",
+      "私が今、リンゴを食べています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "Mr. Sato is drinking tea now.",
+    "ja": "佐藤先生は今、紅茶を飲んでいます。",
+    "ja_answers": [
+      "佐藤先生は今、紅茶を飲んでいます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "The girls are talking in the classroom.",
+    "ja": "女の子たちは教室で話しています。",
+    "ja_answers": [
+      "女の子たちは教室で話しています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "They are practicing basketball in the gym.",
+    "ja": "彼女たちは体育館でバスケットボールを練習しています。",
+    "ja_answers": [
+      "彼女たちは体育館でバスケットボールを練習しています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "choose",
+    "ja": "を選ぶ",
+    "ja_answers": [
+      "を選ぶ"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "hold",
+    "ja": "（手などで）持っている",
+    "ja_answers": [
+      "（手などで）持っている"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "student",
+    "ja": "生徒",
+    "ja_answers": [
+      "生徒"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "own",
+    "ja": "自分（自身）の",
+    "ja_answers": [
+      "自分（自身）の"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "next",
+    "ja": "次の",
+    "ja_answers": [
+      "次の"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "between",
+    "ja": "（2つ）の間に",
+    "ja_answers": [
+      "（2つ）の間に"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "1",
+    "en": "She has two dogs at home.",
+    "ja": "彼女は家で2匹のイヌを飼っています。",
+    "ja_answers": [
+      "彼女は家で2匹のイヌを飼っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Is Ken eating lunch at home?",
+    "ja": "ケンは家で昼食を食べていますか？",
+    "ja_answers": [
+      "ケンは家で昼食を食べていますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Yes, he is.",
+    "ja": "はい、食べています。",
+    "ja_answers": [
+      "はい、食べています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "No, he is not.",
+    "ja": "いいえ、食べていません。",
+    "ja_answers": [
+      "いいえ、食べていません。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Are you making curry now?",
+    "ja": "あなたは今、カレーを作っているのですか。",
+    "ja_answers": [
+      "あなたは今、カレーを作っているのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Are you watching TV?",
+    "ja": "あなたはテレビを見ていますか。",
+    "ja_answers": [
+      "あなたはテレビを見ていますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Is he speaking Japanese?",
+    "ja": "彼は日本語を話しているのですか。",
+    "ja_answers": [
+      "彼は日本語を話しているのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Is Ken studying now?",
+    "ja": "ケンは今、勉強していますか。",
+    "ja_answers": [
+      "ケンは今、勉強していますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Yes, he is.",
+    "ja": "はい、勉強しています。",
+    "ja_answers": [
+      "はい、勉強しています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "I am not studying now.",
+    "ja": "私は今、勉強していません。",
+    "ja_answers": [
+      "私は今、勉強していません。",
+      "ぼくは今、勉強していません。",
+      "僕は今、勉強していません。",
+      "ぼくが今、勉強していません。",
+      "僕が今、勉強していません。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Are they wearing hats?",
+    "ja": "彼らは帽子をかぶっていますか。",
+    "ja_answers": [
+      "彼らは帽子をかぶっていますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Is Mike taking a bath?",
+    "ja": "マイクはお風呂にはいっていますか。",
+    "ja_answers": [
+      "マイクはお風呂にはいっていますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Is Mr. Sato reading a book?",
+    "ja": "佐藤先生は本を読んでいるのですか。",
+    "ja_answers": [
+      "佐藤先生は本を読んでいるのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Are the girls drawing pictures?",
+    "ja": "女の子たちは絵をかいているのですか。",
+    "ja_answers": [
+      "女の子たちは絵をかいているのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "Lisa isn't doing her homework.",
+    "ja": "リサは宿題をしているところではありません。",
+    "ja_answers": [
+      "リサは宿題をしているところではありません。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "What are you making?",
+    "ja": "あなたは何を作っているのですか。",
+    "ja_answers": [
+      "あなたは何を作っているのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "buy",
+    "ja": "買う",
+    "ja_answers": [
+      "買う"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "bring",
+    "ja": "持ってくる",
+    "ja_answers": [
+      "持ってくる"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "kind",
+    "ja": "種類",
+    "ja_answers": [
+      "種類"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "After lunch, some students talk with their friends, others study at the library.",
+    "ja": "昼食後、友だちと話す生徒もいれば、図書室で勉強する生徒もいます。",
+    "ja_answers": [
+      "昼食後、友だちと話す生徒もいれば、図書室で勉強する生徒もいます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "2",
+    "en": "What kind of books does he read?",
+    "ja": "彼はどんな種類の本を読みますか。",
+    "ja_answers": [
+      "彼はどんな種類の本を読みますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "3",
+    "en": "Which do you want, sushi or ramen?",
+    "ja": "あなたはすしとラーメンのどちらがほしいですか。",
+    "ja_answers": [
+      "あなたはすしとラーメンのどちらがほしいですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "3",
+    "en": "I want ramen.",
+    "ja": "私はラーメンがほしいです。",
+    "ja_answers": [
+      "私はラーメンがほしいです。",
+      "ぼくはラーメンがほしいです。",
+      "僕はラーメンがほしいです。",
+      "ぼくがラーメンがほしいです。",
+      "僕がラーメンがほしいです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "3",
+    "en": "Which do you want, udon or soba?",
+    "ja": "あなたはうどんとそばのどちらがほしいですか。",
+    "ja_answers": [
+      "あなたはうどんとそばのどちらがほしいですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "3",
+    "en": "Which do you like, dogs or cats?",
+    "ja": "あなたはイヌとネコのどちらが好きですか。",
+    "ja_answers": [
+      "あなたはイヌとネコのどちらが好きですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "3",
+    "en": "Which do you speak, English or Japanese?",
+    "ja": "あなたは英語と日本語のどちらを話しますか。",
+    "ja_answers": [
+      "あなたは英語と日本語のどちらを話しますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "3",
+    "en": "I speak English.",
+    "ja": "私は英語を話します。",
+    "ja_answers": [
+      "私は英語を話します。",
+      "ぼくは英語を話します。",
+      "僕は英語を話します。",
+      "ぼくが英語を話します。",
+      "僕が英語を話します。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "3",
+    "en": "Which does your dog like, apples or peaches?",
+    "ja": "きみのイヌはリンゴとモモのどちらが好きですか。",
+    "ja_answers": [
+      "きみのイヌはリンゴとモモのどちらが好きですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "dear",
+    "ja": "親愛なる",
+    "ja_answers": [
+      "親愛なる"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "Spanish",
+    "ja": "スペイン語",
+    "ja_answers": [
+      "スペイン語"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "story",
+    "ja": "物語、話",
+    "ja_answers": [
+      "物語",
+      "話"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "all",
+    "ja": "すべての",
+    "ja_answers": [
+      "すべての"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "foreign",
+    "ja": "外国の",
+    "ja_answers": [
+      "外国の"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "event",
+    "ja": "行事、イベント",
+    "ja_answers": [
+      "行事",
+      "イベント"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "graduation",
+    "ja": "卒業",
+    "ja_answers": [
+      "卒業"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "vacation",
+    "ja": "休暇",
+    "ja_answers": [
+      "休暇"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "serve",
+    "ja": "（食事などを）出す",
+    "ja_answers": [
+      "（食事などを）出す"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "Please tell me about your family.",
+    "ja": "あなたの家族について私に教えてください。",
+    "ja_answers": [
+      "あなたの家族について私に教えてください。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Goal Activity",
+    "en": "He goes to school by bike.",
+    "ja": "彼は自転車で学校に行きます。",
+    "ja_answers": [
+      "彼は自転車で学校に行きます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "eating",
+    "ja": "eatの現在進行形",
+    "ja_answers": [
+      "eatの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "playing",
+    "ja": "playの現在進行形",
+    "ja_answers": [
+      "playの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "speaking",
+    "ja": "speakの現在進行形",
+    "ja_answers": [
+      "speakの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "walking",
+    "ja": "walkの現在進行形",
+    "ja_answers": [
+      "walkの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "drinking",
+    "ja": "drinkの現在進行形",
+    "ja_answers": [
+      "drinkの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "reading",
+    "ja": "readの現在進行形",
+    "ja_answers": [
+      "readの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "watching",
+    "ja": "watchの現在進行形",
+    "ja_answers": [
+      "watchの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "studying",
+    "ja": "studyの現在進行形",
+    "ja_answers": [
+      "studyの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "talking",
+    "ja": "talkの現在進行形",
+    "ja_answers": [
+      "talkの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "going",
+    "ja": "goの現在進行形",
+    "ja_answers": [
+      "goの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "practicing",
+    "ja": "practiceの現在進行形",
+    "ja_answers": [
+      "practiceの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "taking",
+    "ja": "takeの現在進行形",
+    "ja_answers": [
+      "takeの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "using",
+    "ja": "useの現在進行形",
+    "ja_answers": [
+      "useの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "doing",
+    "ja": "doの現在進行形",
+    "ja_answers": [
+      "doの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "making",
+    "ja": "makeの現在進行形",
+    "ja_answers": [
+      "makeの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "running",
+    "ja": "runの現在進行形",
+    "ja_answers": [
+      "runの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "swimming",
+    "ja": "swimの現在進行形",
+    "ja_answers": [
+      "swimの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する1",
+    "en": "getting",
+    "ja": "getの現在進行形",
+    "ja_answers": [
+      "getの現在進行形"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "I am studying English now.",
+    "ja": "私は今、英語を勉強しています。",
+    "ja_answers": [
+      "私は今、英語を勉強しています。",
+      "ぼくは今、英語を勉強しています。",
+      "僕は今、英語を勉強しています。",
+      "ぼくが今、英語を勉強しています。",
+      "僕が今、英語を勉強しています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "Is your brother listening to music?",
+    "ja": "あなたのお兄さんは音楽を聞いているのですか。",
+    "ja_answers": [
+      "あなたのお兄さんは音楽を聞いているのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "I am not watching TV.",
+    "ja": "私はテレビを見ていません。",
+    "ja_answers": [
+      "私はテレビを見ていません。",
+      "ぼくはテレビを見ていません。",
+      "僕はテレビを見ていません。",
+      "ぼくがテレビを見ていません。",
+      "僕がテレビを見ていません。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "Which do you often drink, tea or coffee?",
+    "ja": "あなたは紅茶とコーヒーのどちらをよく飲みますか。",
+    "ja_answers": [
+      "あなたは紅茶とコーヒーのどちらをよく飲みますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "Is Mike practicing soccer now?",
+    "ja": "マイクは今、サッカーを練習していますか。",
+    "ja_answers": [
+      "マイクは今、サッカーを練習していますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "No, he isn’t.",
+    "ja": "いいえ、練習していません。",
+    "ja_answers": [
+      "いいえ、練習していません。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "Are Mika and Lisa walking home now?",
+    "ja": "ミカとリサは今、歩いて家に帰っていますか。",
+    "ja_answers": [
+      "ミカとリサは今、歩いて家に帰っていますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "Yes, they are.",
+    "ja": "はい、歩いて家に帰っています。",
+    "ja_answers": [
+      "はい、歩いて家に帰っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "She is reading a book.",
+    "ja": "彼女は本を読んでいます",
+    "ja_answers": [
+      "彼女は本を読んでいます"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "Are you doing your homework?",
+    "ja": "あなたは宿題をしているのですか。",
+    "ja_answers": [
+      "あなたは宿題をしているのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "We are not talking.",
+    "ja": "私たちは話していません",
+    "ja_answers": [
+      "私たちは話していません"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "Which does he like, soccer or baseball?",
+    "ja": "彼はサッカーと野球のどちらが好きですか。",
+    "ja_answers": [
+      "彼はサッカーと野球のどちらが好きですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを整理する2",
+    "en": "He likes baseball.",
+    "ja": "彼は野球が好きです。",
+    "ja_answers": [
+      "彼は野球が好きです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "This is the talkroom for Class 1C.",
+    "ja": "これはクラス1Cのトークルームです。",
+    "ja_answers": [
+      "これはクラス1Cのトークルームです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Share your experiences with your classmates.",
+    "ja": "クラスメイトと自分の体験を共有しましょう。",
+    "ja_answers": [
+      "クラスメイトと自分の体験を共有しましょう。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Today’s dinner is my green curry, and now I’m eating it with my mother!",
+    "ja": "今日の夕食は私のグリーンカレーで、今お母さんと一緒に食べています！",
+    "ja_answers": [
+      "今日の夕食は私のグリーンカレーで",
+      "今お母さんと一緒に食べています！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "It’s so delicious!!",
+    "ja": "とてもおいしいです！！",
+    "ja_answers": [
+      "とてもおいしいです！！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Please watch my video!",
+    "ja": "私の動画を見てください！",
+    "ja_answers": [
+      "私の動画を見てください！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "I washed my basketball shoes.",
+    "ja": "バスケの靴を洗いました。",
+    "ja_answers": [
+      "バスケの靴を洗いました。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Look, they’re shining!",
+    "ja": "見て、輝いているでしょ！",
+    "ja_answers": [
+      "見て",
+      "輝いているでしょ！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Oh, great!",
+    "ja": "おお、すごい！",
+    "ja_answers": [
+      "おお",
+      "すごい！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "I’m just playing a game.",
+    "ja": "私はちょうどゲームをしているところです。",
+    "ja_answers": [
+      "私はちょうどゲームをしているところです。",
+      "ぼくはちょうどゲームをしているところです。",
+      "僕はちょうどゲームをしているところです。",
+      "ぼくがちょうどゲームをしているところです。",
+      "僕がちょうどゲームをしているところです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "This is a present from my father.",
+    "ja": "これはお父さんからのプレゼントです。",
+    "ja_answers": [
+      "これはお父さんからのプレゼントです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "His hobby is DIY.",
+    "ja": "お父さんの趣味はDIYです。",
+    "ja_answers": [
+      "お父さんの趣味はDIYです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Now I’m doing my homework on this desk!",
+    "ja": "今、この机で宿題をしています！",
+    "ja_answers": [
+      "今",
+      "この机で宿題をしています！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "It’s cool, Shuki!!",
+    "ja": "かっこいいね、シュウキ！！",
+    "ja_answers": [
+      "かっこいいね",
+      "シュウキ！！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Yes, everyone, you have a lot of homework.",
+    "ja": "そうだよ、みんな、宿題がたくさんあるよ。",
+    "ja_answers": [
+      "そうだよ、みんな、宿題がたくさんあるよ。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Don’t forget!",
+    "ja": "忘れないでね！",
+    "ja_answers": [
+      "忘れないでね！"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Yumi is cooking green curry now.",
+    "ja": "ユミは今、グリーンカレーを作っています。",
+    "ja_answers": [
+      "ユミは今、グリーンカレーを作っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Yumi has two comments.",
+    "ja": "ユミにはコメントが2つあります。",
+    "ja_answers": [
+      "ユミにはコメントが2つあります。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Jordan is washing his basketball shoes now.",
+    "ja": "ジョーダンは今、バスケットボールの靴を洗っています。",
+    "ja_answers": [
+      "ジョーダンは今、バスケットボールの靴を洗っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Becky is playing a game now.",
+    "ja": "ベッキーは今ゲームをしています。",
+    "ja_answers": [
+      "ベッキーは今ゲームをしています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "Shuki’s desk is a present from his mother.",
+    "ja": "シュウキの机はお母さんからのプレゼントです。",
+    "ja_answers": [
+      "シュウキの机はお母さんからのプレゼントです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する1",
+    "en": "What is Shuki doing now?",
+    "ja": "シュウキは今、何をしていますか？",
+    "ja_answers": [
+      "シュウキは今",
+      "何をしていますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Now, we're enjoying hanami.",
+    "ja": "私たちは今、お花見を楽しんでいます。",
+    "ja_answers": [
+      "私たちは今、お花見を楽しんでいます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Ken is talking with Mike.",
+    "ja": "ケンはマイクと話しています。",
+    "ja_answers": [
+      "ケンはマイクと話しています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Lisa is eating a rice ball.",
+    "ja": "リサはおにぎりを食べています。",
+    "ja_answers": [
+      "リサはおにぎりを食べています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Mika is drinking water.",
+    "ja": "ミカは水を飲んでいます。",
+    "ja_answers": [
+      "ミカは水を飲んでいます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "What are you doing now?",
+    "ja": "今、何をしていますか？",
+    "ja_answers": [
+      "今",
+      "何をしていますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "I’m still working.",
+    "ja": "私は、まだ仕事をしています。",
+    "ja_answers": [
+      "私は、まだ仕事をしています。",
+      "ぼくは、まだ仕事をしています。",
+      "僕は、まだ仕事をしています。",
+      "ぼくが、まだ仕事をしています。",
+      "僕が、まだ仕事をしています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Is Kate making dinner?",
+    "ja": "ケイトは夕食を作っていますか？",
+    "ja_answers": [
+      "ケイトは夕食を作っていますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "It’s curry.",
+    "ja": "カレーです。",
+    "ja_answers": [
+      "カレーです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Good.",
+    "ja": "いいね。",
+    "ja_answers": [
+      "いいね。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "But I can’t come home before eight.",
+    "ja": "でも、8時前には家に帰れません。",
+    "ja_answers": [
+      "でも、8時前には家に帰れません。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Please tell Kate.",
+    "ja": "ケイトに伝えてください。",
+    "ja_answers": [
+      "ケイトに伝えてください。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "The Research of the Month",
+    "ja": "今月の調査",
+    "ja_answers": [
+      "今月の調査"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "Which do you like, coffee or tea?",
+    "ja": "あなたは、コーヒーと紅茶、どっちが好きですか？",
+    "ja_answers": [
+      "あなたは",
+      "コーヒーと紅茶",
+      "どっちが好きですか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "学んだことを活用する2",
+    "en": "In our class, twelve students like coffee, and eighteen students like tea.",
+    "ja": "私たちのクラスでは、12人がコーヒーが好きで、18人が紅茶が好きです。",
+    "ja_answers": [
+      "私たちのクラスでは、12人がコーヒーが好きで、18人が紅茶が好きです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "noon",
+    "ja": "正午",
+    "ja_answers": [
+      "正午"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "feel",
+    "ja": "に感じる",
+    "ja_answers": [
+      "に感じる"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "headache",
+    "ja": "頭痛",
+    "ja_answers": [
+      "頭痛"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "sick",
+    "ja": "病気の、気分が悪い",
+    "ja_answers": [
+      "病気の",
+      "気分が悪い"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "find",
+    "ja": "を見つける",
+    "ja_answers": [
+      "を見つける"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "sit",
+    "ja": "すわる",
+    "ja_answers": [
+      "すわる"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "problem",
+    "ja": "問題、困った事",
+    "ja_answers": [
+      "問題",
+      "困った事"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "fever",
+    "ja": "熱",
+    "ja_answers": [
+      "熱"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "Let’s sit down on the bench and take a rest.",
+    "ja": "ベンチにすわってひと休みしましょう。",
+    "ja_answers": [
+      "ベンチにすわってひと休みしましょう。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "What’s wrong?",
+    "ja": "どうしましたか。",
+    "ja_answers": [
+      "どうしましたか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "I have a headache.",
+    "ja": "頭痛がします。",
+    "ja_answers": [
+      "頭痛がします。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "It’s noon.",
+    "ja": "正午だよ。",
+    "ja_answers": [
+      "正午だよ。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "Let’s eat lunch at the cafeteria.",
+    "ja": "食堂でお昼を食べよう。",
+    "ja_answers": [
+      "食堂でお昼を食べよう。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "Well, I don’t feel well.",
+    "ja": "うーん、体調がよくないの。",
+    "ja_answers": [
+      "うーん、体調がよくないの。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "What’s wrong?",
+    "ja": "どうしたの？",
+    "ja_answers": [
+      "どうしたの？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "I feel sick.",
+    "ja": "気分が悪いの。",
+    "ja_answers": [
+      "気分が悪いの。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "I have a stomachache, too.",
+    "ja": "お腹も痛いよ。",
+    "ja_answers": [
+      "お腹も痛いよ。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "Are you OK?",
+    "ja": "大丈夫？",
+    "ja_answers": [
+      "大丈夫？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "Oh, you have a fever.",
+    "ja": "ああ、熱があるね。",
+    "ja_answers": [
+      "ああ、熱があるね。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Take Action!",
+    "en": "Let’s go to the nurse’s office.",
+    "ja": "保健室に行こう。",
+    "ja_answers": [
+      "保健室に行こう。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "What can you make with this?",
+    "ja": "あなたはこれで何を作れますか。",
+    "ja_answers": [
+      "あなたはこれで何を作れますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "Who is that boy?",
+    "ja": "あの男の子はだれですか。",
+    "ja_answers": [
+      "あの男の子はだれですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "Which does he speak, English or Japanese?",
+    "ja": "彼は英語と日本語のうち、どちらを話しますか。",
+    "ja_answers": [
+      "彼は英語と日本語のうち、どちらを話しますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "Where is Sakura Station?",
+    "ja": "さくら駅はどこですか。",
+    "ja_answers": [
+      "さくら駅はどこですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "When do they practice soccer?",
+    "ja": "彼らはいつサッカーの練習をしますか。",
+    "ja_answers": [
+      "彼らはいつサッカーの練習をしますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "What time do you go to bed?",
+    "ja": "あなたは何時に寝ますか",
+    "ja_answers": [
+      "あなたは何時に寝ますか"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "What color does she like?",
+    "ja": "彼女は何色が好きですか。",
+    "ja_answers": [
+      "彼女は何色が好きですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "How many cats do you have?",
+    "ja": "あなたはネコを何匹飼っていますか。",
+    "ja_answers": [
+      "あなたはネコを何匹飼っていますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "What are you eating?",
+    "ja": "あなたは何を食べていますか？",
+    "ja_answers": [
+      "あなたは何を食べていますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "I’m eating bread.",
+    "ja": "私はパンを食べています。",
+    "ja_answers": [
+      "私はパンを食べています。",
+      "ぼくはパンを食べています。",
+      "僕はパンを食べています。",
+      "ぼくがパンを食べています。",
+      "僕がパンを食べています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "What time do you get up?",
+    "ja": "あなたは何時に起きますか？",
+    "ja_answers": [
+      "あなたは何時に起きますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "I get up at seven.",
+    "ja": "私は7時に起きます。",
+    "ja_answers": [
+      "私は7時に起きます。",
+      "ぼくは7時に起きます。",
+      "僕は7時に起きます。",
+      "ぼくが7時に起きます。",
+      "僕が7時に起きます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "Who is that girl?",
+    "ja": "あの女の子はだれですか？",
+    "ja_answers": [
+      "あの女の子はだれですか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "She’s Mika’s cousin.",
+    "ja": "彼女はミカのいとこです。",
+    "ja_answers": [
+      "彼女はミカのいとこです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "How many apples do you want?",
+    "ja": "あなたはリンゴをいくつ欲しいですか？",
+    "ja_answers": [
+      "あなたはリンゴをいくつ欲しいですか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "I want ten.",
+    "ja": "私は10個欲しいです。",
+    "ja_answers": [
+      "私は10個欲しいです。",
+      "ぼくは10個欲しいです。",
+      "僕は10個欲しいです。",
+      "ぼくが10個欲しいです。",
+      "僕が10個欲しいです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "What animals does your mother like?",
+    "ja": "あなたのお母さんはどんな動物が好きですか？",
+    "ja_answers": [
+      "あなたのお母さんはどんな動物が好きですか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "She likes dogs.",
+    "ja": "彼女は犬が好きです。",
+    "ja_answers": [
+      "彼女は犬が好きです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "Where is he running?",
+    "ja": "彼はどこを走っていますか？",
+    "ja_answers": [
+      "彼はどこを走っていますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "In the park.",
+    "ja": "公園で。",
+    "ja_answers": [
+      "公園で。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "When do you walk to school?",
+    "ja": "あなたはいつ歩いて学校に行きますか？",
+    "ja_answers": [
+      "あなたはいつ歩いて学校に行きますか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "On Tuesdays.",
+    "ja": "火曜日に。",
+    "ja_answers": [
+      "火曜日に。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "Which do you like, summer or winter?",
+    "ja": "あなたは夏と冬、どちらが好きですか？",
+    "ja_answers": [
+      "あなたは夏と冬",
+      "どちらが好きですか？"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "SPECIAL TOPICS",
+    "en": "I like summer.",
+    "ja": "私は夏が好きです。",
+    "ja_answers": [
+      "私は夏が好きです。",
+      "ぼくは夏が好きです。",
+      "僕は夏が好きです。",
+      "ぼくが夏が好きです。",
+      "僕が夏が好きです。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "I am listening to music now.",
+    "ja": "私は今、音楽を聞いています",
+    "ja_answers": [
+      "私は今",
+      "音楽を聞いています",
+      "ぼくは今",
+      "僕は今",
+      "ぼくが今",
+      "僕が今"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "Do you know my birthday?",
+    "ja": "あなたはぼくの誕生日を知っていますか。",
+    "ja_answers": [
+      "あなたはぼくの誕生日を知っていますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "My brother is not at home now.",
+    "ja": "私の兄は今、家にいません。",
+    "ja_answers": [
+      "私の兄は今、家にいません。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "Are you doing your homework?",
+    "ja": "あなたは宿題をしているのですか。",
+    "ja_answers": [
+      "あなたは宿題をしているのですか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "Mika is making lunch in the kitchen.",
+    "ja": "ミカは台所で昼食を作っています。",
+    "ja_answers": [
+      "ミカは台所で昼食を作っています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "Where are you now?",
+    "ja": "あなたたちは今どこにいますか。",
+    "ja_answers": [
+      "あなたたちは今どこにいますか。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "We live in Aoba City.",
+    "ja": "私たちはあおば市に住んでいます。",
+    "ja_answers": [
+      "私たちはあおば市に住んでいます。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "My mother teaches music at school.",
+    "ja": "私の母は学校で音楽を教えています。",
+    "ja_answers": [
+      "私の母は学校で音楽を教えています。"
+    ]
+  },
+  {
+    "lesson": "6",
+    "part": "Remember?",
+    "en": "What are they doing?",
+    "ja": "彼らは何をしていますか。",
+    "ja_answers": [
+      "彼らは何をしていますか。"
+    ]
+  },
+  {
     "lesson": "人称ドリル",
     "part": "Be動詞",
     "en": "I am a teacher.",
@@ -8198,6 +9918,571 @@ window.WORDS = [
     "ja": "彼らは国語を勉強しましたか？いいえ、勉強しませんでした。",
     "ja_answers": [
       "彼らは国語を勉強しましたか？いいえ、勉強しませんでした。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "playing",
+    "ja": "playの現在進行形",
+    "ja_answers": [
+      "playの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "reading",
+    "ja": "readの現在進行形",
+    "ja_answers": [
+      "readの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "waiting",
+    "ja": "waitの現在進行形",
+    "ja_answers": [
+      "waitの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "riding",
+    "ja": "rideの現在進行形",
+    "ja_answers": [
+      "rideの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "running",
+    "ja": "runの現在進行形",
+    "ja_answers": [
+      "runの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "writing",
+    "ja": "writeの現在進行形",
+    "ja_answers": [
+      "writeの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "raining",
+    "ja": "rainの現在進行形",
+    "ja_answers": [
+      "rainの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "eating",
+    "ja": "eatの現在進行形",
+    "ja_answers": [
+      "eatの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "making",
+    "ja": "makeの現在進行形",
+    "ja_answers": [
+      "makeの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "using",
+    "ja": "useの現在進行形",
+    "ja_answers": [
+      "useの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "doing",
+    "ja": "doの現在進行形",
+    "ja_answers": [
+      "doの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "washing",
+    "ja": "washの現在進行形",
+    "ja_answers": [
+      "washの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "helping",
+    "ja": "helpの現在進行形",
+    "ja_answers": [
+      "helpの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "taking",
+    "ja": "takeの現在進行形",
+    "ja_answers": [
+      "takeの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "cooking",
+    "ja": "cookの現在進行形",
+    "ja_answers": [
+      "cookの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "swimming",
+    "ja": "swimの現在進行形",
+    "ja_answers": [
+      "swimの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "listening",
+    "ja": "listenの現在進行形",
+    "ja_answers": [
+      "listenの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "talking",
+    "ja": "talkの現在進行形",
+    "ja_answers": [
+      "talkの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "sleeping",
+    "ja": "sleepの現在進行形",
+    "ja_answers": [
+      "sleepの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "practicing",
+    "ja": "practiceの現在進行形",
+    "ja_answers": [
+      "practiceの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "watching",
+    "ja": "watchの現在進行形",
+    "ja_answers": [
+      "watchの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "enjoying",
+    "ja": "enjoyの現在進行形",
+    "ja_answers": [
+      "enjoyの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "studying",
+    "ja": "studyの現在進行形",
+    "ja_answers": [
+      "studyの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "sitting",
+    "ja": "sitの現在進行形",
+    "ja_answers": [
+      "sitの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "speaking",
+    "ja": "speakの現在進行形",
+    "ja_answers": [
+      "speakの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "56 動詞のing形",
+    "en": "having",
+    "ja": "haveの現在進行形",
+    "ja_answers": [
+      "haveの現在進行形"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "Ann is cooking now.",
+    "ja": "アンは今料理しています。",
+    "ja_answers": [
+      "アンは今料理しています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "Shiori is playing soccer over there now.",
+    "ja": "シオリは今、あそこでサッカーをしています。",
+    "ja_answers": [
+      "シオリは今、あそこでサッカーをしています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "I am watching Castle in the Sky on TV.",
+    "ja": "私はテレビで天空の城ラピュタを見ています。",
+    "ja_answers": [
+      "私はテレビで天空の城ラピュタを見ています。",
+      "ぼくはテレビで天空の城ラピュタを見ています。",
+      "僕はテレビで天空の城ラピュタを見ています。",
+      "ぼくがテレビで天空の城ラピュタを見ています。",
+      "僕がテレビで天空の城ラピュタを見ています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "Many children are swimming in the pool.",
+    "ja": "多くの子供たちがプールで泳いでいます。",
+    "ja_answers": [
+      "多くの子供たちがプールで泳いでいます。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "My brother is sleeping in his room.",
+    "ja": "私のお兄さんが彼の部屋で寝ています。",
+    "ja_answers": [
+      "私のお兄さんが彼の部屋で寝ています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "Kate and Shota are making lunch now.",
+    "ja": "ケイトとショータは今、昼食を作っています。",
+    "ja_answers": [
+      "ケイトとショータは今、昼食を作っています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "My sister is taking a bath.",
+    "ja": "姉はお風呂に入っているところです。",
+    "ja_answers": [
+      "姉はお風呂に入っているところです。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "I am studying my homework.",
+    "ja": "私は宿題をしているところです。",
+    "ja_answers": [
+      "私は宿題をしているところです。",
+      "ぼくは宿題をしているところです。",
+      "僕は宿題をしているところです。",
+      "ぼくが宿題をしているところです。",
+      "僕が宿題をしているところです。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "We are waiting for the bus.",
+    "ja": "ぼくたちはバスを待っているところです。",
+    "ja_answers": [
+      "ぼくたちはバスを待っているところです。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "Seiji is reading a book under the tree now.",
+    "ja": "セイジは今、木の下で本を読んでいます。",
+    "ja_answers": [
+      "セイジは今、木の下で本を読んでいます。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "57 Ann is cooking now.",
+    "en": "Mari and Yuri are helping their mother now.",
+    "ja": "マリとユリは今母親の手伝いをしています。",
+    "ja_answers": [
+      "マリとユリは今母親の手伝いをしています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "Ann is not cooking now.",
+    "ja": "アンは今、料理していません。",
+    "ja_answers": [
+      "アンは今、料理していません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "Maria is not smiling now.",
+    "ja": "マリアは今、ほほえんでいません。",
+    "ja_answers": [
+      "マリアは今、ほほえんでいません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "I am not talking to you.",
+    "ja": "私はあなたに話していません。",
+    "ja_answers": [
+      "私はあなたに話していません。",
+      "ぼくはあなたに話していません。",
+      "僕はあなたに話していません。",
+      "ぼくがあなたに話していません。",
+      "僕があなたに話していません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "You are not watching TV.",
+    "ja": "あなたはテレビを見ていません。",
+    "ja_answers": [
+      "あなたはテレビを見ていません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "Mr. Kudo is not speaking French.",
+    "ja": "工藤先生はフランス語を話していません。",
+    "ja_answers": [
+      "工藤先生はフランス語を話していません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "Hiroki is not practicing now.",
+    "ja": "ヒロキは今練習していません。",
+    "ja_answers": [
+      "ヒロキは今練習していません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "I am not making cookies.",
+    "ja": "ぼくはクッキーを作っているのではありません。",
+    "ja_answers": [
+      "ぼくはクッキーを作っているのではありません。",
+      "私はクッキーを作っているのではありません。",
+      "ぼくがクッキーを作っているのではありません。",
+      "僕がクッキーを作っているのではありません。",
+      "私がクッキーを作っているのではありません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "They aren’t using the gym now.",
+    "ja": "彼らは今体育館を使っていません。",
+    "ja_answers": [
+      "彼らは今体育館を使っていません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "58 Ann is not cooking now.",
+    "en": "You’re not enjoying your life.",
+    "ja": "あなたは自分の人生を楽しんでいません。",
+    "ja_answers": [
+      "あなたは自分の人生を楽しんでいません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Is Ann cooking now?",
+    "ja": "アンは今料理していますか。",
+    "ja_answers": [
+      "アンは今料理していますか。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Yes, she is.",
+    "ja": "はい、しています。",
+    "ja_answers": [
+      "はい、しています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "No, she is not.",
+    "ja": "いいえ、していません。",
+    "ja_answers": [
+      "いいえ、していません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Is Bob sleeping?",
+    "ja": "ボブは眠っていますか。",
+    "ja_answers": [
+      "ボブは眠っていますか。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Yes, he is.",
+    "ja": "はい、眠っています。",
+    "ja_answers": [
+      "はい、眠っています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "No, he is not.",
+    "ja": "いいえ、眠っていません。",
+    "ja_answers": [
+      "いいえ、眠っていません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Are you reading NARUTO?",
+    "ja": "あなたは『ナルト』を読んでいますか。",
+    "ja_answers": [
+      "あなたは『ナルト』を読んでいますか。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Yes, I am.",
+    "ja": "はい、読んでいます。",
+    "ja_answers": [
+      "はい、読んでいます。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "No, I am not.",
+    "ja": "いいえ、読んでいません。",
+    "ja_answers": [
+      "いいえ、読んでいません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Are Yuta and Meg eating takoyaki?",
+    "ja": "ユウタとメグはたこ焼きを食べていますか。",
+    "ja_answers": [
+      "ユウタとメグはたこ焼きを食べていますか。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Yes, they are.",
+    "ja": "はい、食べています。",
+    "ja_answers": [
+      "はい、食べています。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "No, they aren't.",
+    "ja": "いいえ、食べていません。",
+    "ja_answers": [
+      "いいえ、食べていません。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Is Nobu studying now?",
+    "ja": "ノブは今勉強しているところですか。",
+    "ja_answers": [
+      "ノブは今勉強しているところですか。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "Are you listening to me?",
+    "ja": "あなたは私の言うことを聞いていますか。",
+    "ja_answers": [
+      "あなたは私の言うことを聞いていますか。"
+    ]
+  },
+  {
+    "lesson": "1年3次考査",
+    "part": "59 Is Ann cooking now?",
+    "en": "What are they doing in the gym?",
+    "ja": "彼らは体育館で何をしているのですか。",
+    "ja_answers": [
+      "彼らは体育館で何をしているのですか。"
     ]
   }
 ];
